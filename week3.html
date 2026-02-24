@@ -1,0 +1,2833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Philippians 2:1–11 — The Mind of Christ (Participant)</title>
+<meta name="description" content="Participant Handout: An interactive verse-by-verse Bible study through Philippians 2:1–11 with Greek word studies, guided discussion, and interactive features.">
+<meta property="og:title" content="The Mind of Christ — Philippians 2:1–11 (Participant Handout)">
+<meta property="og:description" content="Week 3 Participant Handout for a verse-by-verse Bible study through Philippians. Observe · Interpret · Apply.">
+<meta property="og:type" content="website">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a1f;
+    --ink-soft: #2d2d35;
+    --body: #3a3a42;
+    --muted: #6b6b78;
+    --faint: #9898a6;
+    --whisper: #c5c5cf;
+
+    --paper: #faf9f7;
+    --paper-warm: #f5f3ef;
+    --paper-deep: #edeae4;
+
+    --navy: #1a2744;
+    --navy-mid: #243456;
+    --slate: #3d5a80;
+    --teal: #2e7d6f;
+    --teal-soft: #3a9b8a;
+    --teal-pale: #e8f5f1;
+
+    --gold: #b08d3e;
+    --gold-warm: #c9a54d;
+    --gold-pale: #faf4e4;
+    --gold-ghost: #f7f1de;
+
+    --rose: #8b3a4a;
+    --rose-pale: #fdf0f2;
+
+    --sand-band: #f3f0ea;
+
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+
+    --shadow-subtle: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+    --shadow-card: 0 2px 8px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-elevated: 0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.06);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+    background: var(--paper);
+    color: var(--body);
+    line-height: 1.7;
+  }
+
+  /* ====== LAYOUT SHELL ====== */
+  .study-container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+  }
+
+  /* ====== COVER ====== */
+  .cover {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(ellipse at 30% 20%, rgba(46,125,111,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse at 70% 80%, rgba(176,141,62,0.05) 0%, transparent 60%),
+      linear-gradient(180deg, var(--paper) 0%, var(--paper-warm) 100%);
+    z-index: 0;
+  }
+
+  .cover > * { position: relative; z-index: 1; }
+
+  .cover-series {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+  }
+
+  .cover-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 6vw, 4rem);
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+  }
+
+  .cover-passage {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: 2rem;
+  }
+
+  .cover-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 0 auto 2rem;
+  }
+
+  .cover-meta {
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-weight: 500;
+    line-height: 1.8;
+  }
+
+  .cover-meta .edition-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
+    border-radius: 3px;
+    margin-bottom: 0.5rem;
+  }
+
+  .cover-framework {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-top: 0.5rem;
+  }
+
+  /* ====== NAV PROGRESS BAR ====== */
+  .nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(250,249,247,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    padding: 0;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .nav-bar.scrolled {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+
+  .nav-inner {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .nav-inner::-webkit-scrollbar { display: none; }
+
+  .nav-item {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--faint);
+    padding: 0.85rem 0.9rem;
+    text-decoration: none;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .nav-item:hover {
+    color: var(--teal);
+  }
+
+  .nav-item.active {
+    color: var(--teal);
+    border-bottom-color: var(--teal);
+    font-weight: 600;
+  }
+
+  /* ====== SECTION SYSTEM ====== */
+  .section {
+    margin-bottom: 0;
+    padding-top: 3rem;
+  }
+
+  .section-header {
+    margin-bottom: 1.75rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--paper-deep);
+  }
+
+  .section-label {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.35rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  .section-subtitle {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 0.35rem;
+    font-weight: 400;
+  }
+
+  /* ====== TYPOGRAPHY ====== */
+  .prose {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1.02rem;
+    line-height: 1.85;
+    color: var(--body);
+    font-weight: 400;
+  }
+
+  .prose p { margin-bottom: 1.25rem; }
+  .prose p:last-child { margin-bottom: 0; }
+
+  .prose strong {
+    font-weight: 600;
+    color: var(--ink-soft);
+  }
+
+  .prose em {
+    font-style: italic;
+  }
+
+  .subsection-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--slate);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .instruction {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--muted);
+    line-height: 1.65;
+    margin-bottom: 1rem;
+  }
+
+  /* ====== LEADER NOTE ====== */
+  .leader-note {
+    background: var(--gold-pale);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+    position: relative;
+  }
+
+  .leader-note::before {
+    content: 'LEADER NOTE';
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+
+  .leader-note p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    margin-bottom: 0.6rem;
+  }
+  .leader-note p:last-child { margin-bottom: 0; }
+
+  /* ====== DISCUSSION CALLOUT ====== */
+  .discussion {
+    background: var(--teal-pale);
+    border-left: 3px solid var(--teal);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .discussion::before {
+    content: 'DISCUSSION';
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--teal);
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+
+  .discussion p {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+  }
+
+  /* ====== NOTICE CALLOUT ====== */
+  .notice {
+    background: var(--paper-warm);
+    border-left: 3px solid var(--whisper);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .notice::before {
+    content: 'NOTICE';
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--faint);
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+
+  .notice p {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--body);
+    font-style: italic;
+  }
+
+  /* ====== SCRIPTURE BLOCK ====== */
+  .scripture-block {
+    background: white;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: var(--radius-lg);
+    padding: 0;
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow-subtle);
+    overflow: hidden;
+    /* iOS: prevent default touch behaviors that interfere with marking */
+    -webkit-touch-callout: none;
+  }
+
+  /* iOS Safari: ensure all interactive elements fire tap events */
+  .s-word { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .bible-ref, .strongs-link, .inline-strongs-link { cursor: pointer; }
+  .legend-chip, .mark-color-btn, .mark-style-btn, .mark-eraser-btn, .mark-clear-btn,
+  .nav-item, .save-btn, .save-btn-secondary, .ref-popup-close { 
+    cursor: pointer; 
+    -webkit-tap-highlight-color: transparent; 
+  }
+
+  /* Marking Toolbar */
+  .mark-toolbar {
+    padding: 0;
+    background: var(--paper-warm);
+    border-bottom: 1px solid var(--paper-deep);
+  }
+
+  .mark-toolbar-row {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.6rem 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .mark-legend {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1.25rem;
+    border-top: 1px solid rgba(0,0,0,0.04);
+    flex-wrap: wrap;
+  }
+
+  .mark-legend-label {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin-right: 0.2rem;
+  }
+
+  .legend-chip {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    user-select: none;
+    letter-spacing: 0.01em;
+    -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .legend-chip:hover, .legend-chip:active { transform: translateY(-1px); box-shadow: var(--shadow-subtle); }
+
+  .legend-chip.legend-yellow  { background: #fde68a; color: #92400e; }
+  .legend-chip.legend-blue    { background: #bfdbfe; color: #1e40af; }
+  .legend-chip.legend-green   { background: #bbf7d0; color: #166534; }
+  .legend-chip.legend-rose    { background: #fecdd3; color: #9f1239; }
+  .legend-chip.legend-orange  { background: #fed7aa; color: #9a3412; }
+  .legend-chip.legend-purple  { background: #e9d5ff; color: #6b21a8; }
+
+  .mark-toolbar-label {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin-right: 0.35rem;
+  }
+
+  .mark-color-btn {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .mark-color-btn:hover {
+    transform: scale(1.15);
+  }
+
+  .mark-color-btn.active {
+    border-color: var(--ink);
+    box-shadow: 0 0 0 2px white, 0 0 0 4px var(--ink);
+    transform: scale(1.1);
+  }
+
+  .mark-color-btn[data-color="yellow"] { background: #fde68a; }
+  .mark-color-btn[data-color="blue"]   { background: #bfdbfe; }
+  .mark-color-btn[data-color="green"]  { background: #bbf7d0; }
+  .mark-color-btn[data-color="rose"]   { background: #fecdd3; }
+  .mark-color-btn[data-color="orange"] { background: #fed7aa; }
+  .mark-color-btn[data-color="purple"] { background: #e9d5ff; }
+  .mark-color-btn[data-color="none"]   { background: white; border: 2px solid var(--paper-deep); position: relative; }
+  .mark-color-btn[data-color="none"]::after { content: ''; position: absolute; top: 50%; left: 50%; width: 16px; height: 2px; background: var(--faint); transform: translate(-50%, -50%) rotate(-45deg); }
+  .mark-color-btn[data-color="none"].active { border-color: var(--ink); box-shadow: 0 0 0 2px white, 0 0 0 4px var(--ink); }
+
+  .mark-divider {
+    width: 1px;
+    height: 18px;
+    background: var(--paper-deep);
+    margin: 0 0.25rem;
+    flex-shrink: 0;
+  }
+
+  .mark-style-btn {
+    width: 28px;
+    height: 26px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--paper-deep);
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 0.85rem;
+    color: var(--muted);
+    transition: all 0.15s ease;
+    flex-shrink: 0;
+  }
+
+  .mark-style-btn:hover {
+    border-color: var(--slate);
+    color: var(--ink);
+  }
+
+  .mark-style-btn.active {
+    background: var(--navy);
+    color: white;
+    border-color: var(--navy);
+  }
+
+  .mark-eraser-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--paper-deep);
+    background: white;
+    cursor: pointer;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: var(--muted);
+    transition: all 0.15s ease;
+    flex-shrink: 0;
+  }
+
+  .mark-eraser-btn:hover {
+    border-color: var(--rose);
+    color: var(--rose);
+  }
+
+  .mark-eraser-btn.active {
+    background: var(--rose-pale);
+    border-color: var(--rose);
+    color: var(--rose);
+  }
+
+  .mark-undo-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--paper-deep);
+    background: white;
+    cursor: pointer;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: var(--muted);
+    transition: all 0.15s ease;
+    flex-shrink: 0;
+  }
+
+  .mark-undo-btn:hover {
+    border-color: var(--teal);
+    color: var(--teal);
+  }
+
+  .mark-undo-btn:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+
+  .mark-clear-btn {
+    margin-left: auto;
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid transparent;
+    background: transparent;
+    cursor: pointer;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--faint);
+    transition: all 0.15s ease;
+  }
+
+  .mark-clear-btn:hover {
+    color: var(--rose);
+    border-color: var(--rose-pale);
+    background: var(--rose-pale);
+  }
+
+  /* Scripture text area */
+  .scripture-body {
+    padding: 1.75rem 2.25rem;
+  }
+
+  .scripture-text {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 2.0;
+    color: var(--ink-soft);
+    user-select: none;
+    -webkit-user-select: none;
+    /* Allow vertical scroll but prevent horizontal pan — enables drag-to-highlight */
+    touch-action: pan-y;
+  }
+
+  .scripture-text .verse-num {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--teal);
+    vertical-align: super;
+    margin-right: 2px;
+    line-height: 0;
+    pointer-events: none;
+  }
+
+  .scripture-text p {
+    margin-bottom: 0.5rem;
+    text-indent: 0;
+  }
+
+  /* Individual words — the clickable atoms */
+  .s-word {
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 1px 0;
+    transition: background-color 0.1s ease;
+    position: relative;
+  }
+
+  .s-word:hover {
+    background: rgba(0,0,0,0.04);
+  }
+
+  /* Highlight colors */
+  .s-word.hl-yellow  { background: #fde68a; }
+  .s-word.hl-blue    { background: #bfdbfe; }
+  .s-word.hl-green   { background: #bbf7d0; }
+  .s-word.hl-rose    { background: #fecdd3; }
+  .s-word.hl-orange  { background: #fed7aa; }
+  .s-word.hl-purple  { background: #e9d5ff; }
+
+  /* Bold/underline marks */
+  .s-word.mk-bold      { font-weight: 700; }
+  .s-word.mk-underline { text-decoration: underline; text-decoration-color: var(--ink-soft); text-underline-offset: 3px; }
+
+  /* Combined: highlighted + bold/underline still works */
+  .s-word.hl-yellow.mk-bold,
+  .s-word.hl-blue.mk-bold,
+  .s-word.hl-green.mk-bold,
+  .s-word.hl-rose.mk-bold,
+  .s-word.hl-orange.mk-bold { font-weight: 700; }
+  .s-word.hl-purple.mk-bold { font-weight: 700; }
+
+  /* Eraser cursor */
+  .scripture-text.eraser-mode .s-word {
+    cursor: crosshair;
+  }
+  .scripture-text.eraser-mode .s-word:hover {
+    background: var(--rose-pale);
+    text-decoration: line-through;
+    text-decoration-color: var(--rose);
+  }
+
+  /* Toolbar hint */
+  .mark-hint {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.7rem;
+    color: var(--faint);
+    padding: 0.4rem 1.25rem 0.5rem;
+    background: var(--paper-warm);
+    border-top: 1px solid var(--paper-deep);
+    text-align: center;
+  }
+
+  .mark-hint kbd {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 600;
+    padding: 1px 5px;
+    border-radius: 3px;
+    border: 1px solid var(--paper-deep);
+    background: white;
+    color: var(--muted);
+  }
+
+  /* ====== NOTES AREA ====== */
+  .notes-area {
+    margin: 1.5rem 0;
+  }
+
+  .notes-area label {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .notes-area textarea {
+    width: 100%;
+    min-height: 100px;
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    background: white;
+    border: 1px solid var(--paper-deep);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+    resize: vertical;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+  }
+
+  .notes-area textarea:focus {
+    border-color: var(--teal-soft);
+    box-shadow: 0 0 0 3px rgba(46,125,111,0.08);
+  }
+
+  .notes-area textarea::placeholder {
+    color: var(--whisper);
+    font-style: italic;
+  }
+
+  /* ====== SAND BAND (WORKBOOK ZONE) ====== */
+  .sand-band {
+    background: var(--sand-band);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem 1.75rem;
+    margin: 1.25rem 0;
+  }
+
+  .question-item {
+    margin-bottom: 1rem;
+  }
+
+  .question-item:last-child { margin-bottom: 0; }
+
+  .question-label {
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+  }
+
+  .question-letter {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--teal);
+    min-width: 1.4rem;
+    padding-top: 0.15rem;
+  }
+
+  .question-text {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+
+  .question-input {
+    width: 100%;
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    background: white;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: var(--radius-sm);
+    padding: 0.6rem 0.85rem;
+    margin-left: 2rem;
+    width: calc(100% - 2rem);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    resize: vertical;
+  }
+
+  .question-input:focus {
+    border-color: var(--teal-soft);
+    box-shadow: 0 0 0 3px rgba(46,125,111,0.08);
+  }
+
+  .question-input::placeholder {
+    color: var(--whisper);
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+
+  .question-input.short { min-height: 36px; resize: none; }
+  .question-input.medium { min-height: 65px; }
+  .question-input.long { min-height: 100px; }
+
+  /* Step items inside sand band */
+  .step-item {
+    margin-bottom: 1.25rem;
+  }
+
+  .step-label {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+  }
+
+  .step-marker {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: white;
+    background: var(--teal);
+    border-radius: var(--radius-sm);
+    padding: 0.15rem 0.5rem;
+    white-space: nowrap;
+    margin-top: 0.1rem;
+  }
+
+  .step-text {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+
+  /* ====== WORD STUDY BLOCK ====== */
+  .word-study {
+    margin: 1.75rem 0;
+    padding-top: 1.25rem;
+    border-top: 2px solid var(--teal);
+  }
+
+  .word-study-term {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.15rem;
+  }
+
+  .word-study-term .strongs,
+  .word-study-term .strongs-link {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--faint);
+    margin-left: 0.4rem;
+  }
+
+  .word-study-term .strongs-link {
+    border-bottom: 1px dotted var(--whisper);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .word-study-term .strongs-link:hover {
+    color: var(--teal);
+    border-bottom-color: var(--teal);
+  }
+
+  .word-study-def {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--body);
+  }
+
+  .word-study-def p { margin-bottom: 0.75rem; }
+  .word-study-def p:last-child { margin-bottom: 0; }
+
+  /* Inline word study (secondary terms) */
+  .inline-term {
+    font-weight: 700;
+    color: var(--ink-soft);
+  }
+
+  .inline-strongs {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.78rem;
+    color: var(--faint);
+  }
+
+  /* ====== PRAYER BLOCK ====== */
+  .prayer-block {
+    background: linear-gradient(135deg, var(--paper-warm) 0%, var(--gold-ghost) 100%);
+    border-radius: var(--radius-lg);
+    padding: 2rem 2.25rem;
+    margin: 1.5rem 0;
+    border: 1px solid rgba(176,141,62,0.12);
+  }
+
+  .prayer-text {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1.02rem;
+    font-style: italic;
+    line-height: 1.85;
+    color: var(--ink-soft);
+  }
+
+  /* ====== REFLECTION QUESTIONS ====== */
+  .reflection-item {
+    margin-bottom: 1.75rem;
+  }
+
+  .reflection-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--whisper);
+    line-height: 1;
+    margin-bottom: 0.35rem;
+  }
+
+  .reflection-question {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--body);
+    margin-bottom: 0.6rem;
+  }
+
+  .reflection-input {
+    width: 100%;
+    min-height: 90px;
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    background: white;
+    border: 1px solid var(--paper-deep);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .reflection-input:focus {
+    border-color: var(--teal-soft);
+    box-shadow: 0 0 0 3px rgba(46,125,111,0.08);
+  }
+
+  .reflection-input::placeholder {
+    color: var(--whisper);
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+
+  /* ====== ACTION STEPS ====== */
+  .action-step {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--paper-deep);
+  }
+
+  .action-step:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .action-day {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--teal);
+    background: var(--teal-pale);
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+  }
+
+  .action-content h4 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+    margin-bottom: 0.3rem;
+  }
+
+  .action-content p {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--body);
+  }
+
+  /* ====== SECTION DIVIDER ====== */
+  .section-divider {
+    height: 1px;
+    background: var(--paper-deep);
+    margin: 0;
+  }
+
+  /* ====== SAVE STATE BANNER ====== */
+  .save-banner {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .save-btn {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.65rem 1.1rem;
+    background: var(--navy);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    box-shadow: var(--shadow-elevated);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .save-btn:hover {
+    background: var(--navy-mid);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  }
+
+  .save-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .save-btn-secondary {
+    background: white;
+    color: var(--body);
+    border: 1px solid var(--paper-deep);
+    box-shadow: var(--shadow-card);
+  }
+
+  .save-btn-secondary:hover {
+    background: var(--paper-warm);
+    border-color: var(--whisper);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .save-btn-secondary svg {
+    color: var(--muted);
+  }
+
+  .save-status {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.72rem;
+    color: var(--faint);
+    background: white;
+    padding: 0.5rem 0.85rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .save-status.visible { opacity: 1; }
+
+  /* ====== FOOTER ====== */
+  .study-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--paper-deep);
+    text-align: center;
+  }
+
+  .study-footer p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.72rem;
+    color: var(--whisper);
+    line-height: 1.6;
+  }
+
+  /* ====== BIBLE REFERENCE POPUP SYSTEM ====== */
+  .bible-ref {
+    color: var(--teal);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--teal-soft);
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    -webkit-tap-highlight-color: rgba(46,107,127,0.15);
+  }
+
+  .bible-ref:hover, .bible-ref:active {
+    color: var(--teal-soft);
+    border-bottom-style: solid;
+  }
+
+  /* Strong's number links */
+  .strongs-link {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: inherit;
+    font-weight: 400;
+    color: var(--faint);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--whisper);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: rgba(46,107,127,0.15);
+  }
+
+  .strongs-link:hover, .strongs-link:active {
+    color: var(--teal);
+    border-bottom-color: var(--teal);
+  }
+
+  /* Inline strongs (inside prose) */
+  .inline-strongs-link {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.78rem;
+    color: var(--faint);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--whisper);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    -webkit-tap-highlight-color: rgba(46,107,127,0.15);
+  }
+
+  .inline-strongs-link:hover, .inline-strongs-link:active {
+    color: var(--teal);
+    border-bottom-color: var(--teal);
+  }
+
+  /* The popup tooltip */
+  .ref-popup {
+    position: fixed;
+    z-index: 500;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08);
+    padding: 1.25rem 1.5rem;
+    max-width: 420px;
+    width: calc(100vw - 2rem);
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+  }
+
+  .ref-popup.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .ref-popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.6rem;
+  }
+
+  .ref-popup-title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--teal);
+  }
+
+  .ref-popup-close {
+    width: 22px;
+    height: 22px;
+    border: none;
+    background: var(--paper-warm);
+    border-radius: 50%;
+    color: var(--faint);
+    font-size: 0.7rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+    line-height: 1;
+  }
+
+  .ref-popup-close:hover {
+    background: var(--paper-deep);
+    color: var(--ink);
+  }
+
+  .ref-popup-text {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--body);
+    margin-bottom: 0.75rem;
+  }
+
+  .ref-popup-text .popup-verse-num {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 700;
+    color: var(--teal);
+    vertical-align: super;
+    margin-right: 1px;
+  }
+
+  .ref-popup-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--teal);
+    text-decoration: none;
+    padding: 0.3rem 0.65rem;
+    background: var(--teal-pale);
+    border-radius: var(--radius-sm);
+    transition: all 0.15s ease;
+  }
+
+  .ref-popup-link:hover {
+    background: var(--teal);
+    color: white;
+  }
+
+  .ref-popup-link svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  /* ====== APPENDIX COMPONENTS ====== */
+  .appendix-divider {
+    margin: 3.5rem 0 0;
+    padding-top: 2rem;
+    border-top: 3px solid var(--navy);
+    text-align: center;
+  }
+
+  .appendix-divider-label {
+    display: inline-block;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--faint);
+    background: var(--paper);
+    padding: 0 1.25rem;
+    position: relative;
+    top: -2.65rem;
+    margin-bottom: -1.5rem;
+  }
+
+  /* Amplified paraphrase block */
+  .paraphrase-block {
+    background: white;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: var(--radius-lg);
+    padding: 2rem 2.25rem;
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow-subtle);
+  }
+
+  .paraphrase-text {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1.02rem;
+    line-height: 1.95;
+    color: var(--ink-soft);
+  }
+
+  .paraphrase-text p {
+    margin-bottom: 0.75rem;
+  }
+
+  .paraphrase-text p:last-child { margin-bottom: 0; }
+
+  .paraphrase-text .verse-num {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--teal);
+    vertical-align: super;
+    margin-right: 2px;
+    line-height: 0;
+  }
+
+  .paraphrase-text .amplified {
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* Greek insight cards */
+  .greek-group-title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-top: 2.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--paper-deep);
+  }
+
+  .greek-card {
+    background: white;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-subtle);
+    border-top: 3px solid var(--teal);
+  }
+
+  .greek-card-term {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.1rem;
+  }
+
+  .greek-card-term .strongs,
+  .greek-card-term .strongs-link {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--faint);
+    margin-left: 0.4rem;
+  }
+
+  .greek-card-term .strongs-link {
+    border-bottom: 1px dotted var(--whisper);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .greek-card-term .strongs-link:hover {
+    color: var(--teal);
+    border-bottom-color: var(--teal);
+  }
+
+  .greek-card-def {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1.02rem;
+    line-height: 1.75;
+    color: var(--body);
+    margin-bottom: 0.75rem;
+  }
+
+  .greek-card-def p { margin-bottom: 0.6rem; }
+  .greek-card-def p:last-child { margin-bottom: 0; }
+
+  .greek-card-xref {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.65;
+    color: var(--slate);
+    background: var(--paper-warm);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 1rem;
+    margin-top: 0.75rem;
+    border-left: 2px solid var(--teal-soft);
+  }
+
+  .greek-card-xref strong {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--teal);
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  /* ====== ANIMATIONS ====== */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .section {
+    animation: fadeInUp 0.5s ease both;
+  }
+
+  /* ====== RESPONSIVE ====== */
+  @media (max-width: 768px) {
+    .study-container { padding: 0 1rem 3rem; }
+    .cover { min-height: 75vh; padding: 3rem 1.5rem; }
+    .cover-title { font-size: 2.4rem; }
+    .scripture-body { padding: 1.25rem; }
+    .mark-toolbar-row { padding: 0.5rem 0.75rem; gap: 0.25rem; }
+    .mark-toolbar-label { display: none; }
+    .mark-legend { padding: 0.4rem 0.75rem; gap: 0.3rem; }
+    .mark-legend-label { display: none; }
+    .legend-chip { font-size: 0.62rem; padding: 0.2rem 0.55rem; }
+    .mark-clear-btn { font-size: 0.55rem; padding: 0.2rem 0.5rem; }
+    .mark-hint { font-size: 0.6rem; padding: 0.3rem 0.75rem; }
+    .sand-band { padding: 1.25rem; }
+    .prayer-block { padding: 1.5rem; }
+    .question-input { margin-left: 0; width: 100%; }
+    .action-step { flex-direction: column; gap: 0.5rem; }
+    .nav-item { padding: 0.75rem 0.65rem; font-size: 0.65rem; }
+    .save-banner { gap: 0.35rem; }
+    .save-btn { font-size: 0.7rem; padding: 0.55rem 0.8rem; }
+  }
+
+  @media (max-width: 480px) {
+    .stat-grid { grid-template-columns: 1fr; }
+    .cover-title { font-size: 2rem; }
+    .section-title { font-size: 1.5rem; }
+    .save-banner { bottom: 1rem; right: 1rem; }
+  }
+
+  /* Print: produce a clean PDF with filled-in answers */
+  @media print {
+    .nav-bar, .save-banner, .mark-toolbar, .mark-legend, .mark-hint { display: none !important; }
+
+    body { padding: 0; background: white; color: #1a1a1f; font-size: 11pt; }
+    .study-container { max-width: 100%; padding: 0 0.5in; }
+    .cover { min-height: auto; padding: 1.5in 1in 1in; page-break-after: always; }
+    .cover::before { display: none; }
+    .section { page-break-inside: avoid; padding-top: 1.5rem; }
+    .section-header { page-break-after: avoid; }
+    .subsection-title { page-break-after: avoid; }
+
+    /* Leader notes: show with clear border */
+    .leader-note { break-inside: avoid; }
+    .discussion, .notice { break-inside: avoid; }
+
+    /* Answers: display as bordered blocks with their content */
+    .question-input, .reflection-input, .notes-area textarea {
+      border: 1px solid #d0d0d0 !important;
+      background: #fafafa !important;
+      min-height: 2em !important;
+      padding: 0.4em 0.6em !important;
+      font-size: 10pt !important;
+      color: #1a1a1f !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Sand bands */
+    .sand-band {
+      background: #f5f4f0 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      break-inside: avoid;
+    }
+
+    /* Keep highlights visible in print */
+    .s-word.hl-yellow  { background: #fde68a !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .s-word.hl-blue    { background: #bfdbfe !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .s-word.hl-green   { background: #bbf7d0 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .s-word.hl-rose    { background: #fecdd3 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .s-word.hl-orange  { background: #fed7aa !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .s-word.hl-purple  { background: #e9d5ff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+    /* Callouts */
+    .leader-note, .discussion, .notice, .prayer-block {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Greek cards */
+    .greek-card { break-inside: avoid; }
+
+    /* Links: show as plain text in print */
+    .bible-ref { color: inherit !important; border-bottom: none !important; }
+    .strongs-link, .inline-strongs-link { color: #6b6b78 !important; border-bottom: none !important; text-decoration: none !important; }
+
+    /* Action steps */
+    .action-step { break-inside: avoid; }
+
+    /* Page margins */
+    @page { margin: 0.75in; }
+  }
+</style>
+
+</head>
+<body>
+
+<!-- ====== COVER ====== -->
+<div class="cover">
+  <div class="cover-series">Philippians: A Verse-by-Verse Bible Study</div>
+  <h1 class="cover-title">The Mind of Christ</h1>
+  <div class="cover-passage">Philippians 2:1–11</div>
+  <div class="cover-divider"></div>
+  <div class="cover-meta">
+    <span class="edition-badge">Participant Handout</span><br>
+    Week 3<br>
+    <span class="cover-framework">Observe · Interpret · Apply</span>
+  </div>
+</div>
+
+<!-- ====== STICKY NAV ====== -->
+<nav class="nav-bar" id="navBar">
+  <div class="nav-inner">
+    <a class="nav-item" href="index.html" title="Back to Home">&#8592; Home</a>
+    <a class="nav-item" href="#scene">Scene</a>
+    <a class="nav-item" href="#read">Read</a>
+    <a class="nav-item" href="#observe">Observe</a>
+    <a class="nav-item" href="#interpret">Interpret</a>
+    <a class="nav-item" href="#apply">Apply</a>
+    <a class="nav-item" href="#action">Action</a>
+    <a class="nav-item" href="#appendix">Appendix</a>
+  </div>
+</nav>
+
+<!-- ====== MAIN CONTENT ====== -->
+<main class="study-container">
+
+  <!-- ====== SETTING THE SCENE ====== -->
+  <section class="section" id="scene">
+    <div class="section-header">
+      <div class="section-label">Setting the Scene</div>
+      <h2 class="section-title">A City Built on Climbing</h2>
+    </div>
+
+    <div class="prose">
+      <p>Philippi was a city obsessed with status. As a Roman colony, it functioned like a miniature Rome — complete with Latin as the official language, Roman law, and a social hierarchy that rewarded ambition. Veterans, merchants, and civic leaders competed for honor, titles, and public recognition. Climbing mattered. Your rank determined where you sat, who greeted you, and how you were buried.</p>
+
+      <p>Into this culture, Paul writes from prison. He’s been talking about a joy that chains can’t touch (chapter 1) and a life defined by Christ rather than circumstance. Now he turns to the life of the community itself — how they treat one another, what shapes their posture toward each other, and what pattern holds it all together.</p>
+
+      <p>The Philippians already know the pressure to climb. What they’re about to hear will challenge everything their city trained them to value.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ====== READ THE PASSAGE ====== -->
+  <section class="section" id="read">
+    <div class="section-header">
+      <div class="section-label">Read the Passage</div>
+      <h2 class="section-title">Philippians 2:1–11 (ESV)</h2>
+    </div>
+
+    <div class="instruction">Read the passage slowly — twice. The first time, just listen. The second time, use your key word marking tool. Mark these words each time they appear.</div>
+
+    <div class="scripture-block" id="scriptureBlock">
+      <!-- Marking Toolbar with Keyword Legend -->
+      <div class="mark-toolbar">
+        <div class="mark-toolbar-row">
+          <span class="mark-toolbar-label">Mark</span>
+          <button class="mark-color-btn active" data-color="yellow" title="Yellow highlight" onclick="setMarkColor('yellow')"></button>
+          <button class="mark-color-btn" data-color="blue" title="Blue highlight" onclick="setMarkColor('blue')"></button>
+          <button class="mark-color-btn" data-color="green" title="Green highlight" onclick="setMarkColor('green')"></button>
+          <button class="mark-color-btn" data-color="rose" title="Rose highlight" onclick="setMarkColor('rose')"></button>
+          <button class="mark-color-btn" data-color="orange" title="Orange highlight" onclick="setMarkColor('orange')"></button>
+          <button class="mark-color-btn" data-color="purple" title="Purple highlight" onclick="setMarkColor('purple')"></button>
+          <button class="mark-color-btn" data-color="none" title="No color (bold/underline only)" onclick="setMarkColor('none')"></button>
+          <div class="mark-divider"></div>
+          <button class="mark-style-btn" id="btnBold" title="Bold (B)" onclick="toggleMarkStyle('bold')"><strong>B</strong></button>
+          <button class="mark-style-btn" id="btnUnderline" title="Underline (U)" onclick="toggleMarkStyle('underline')"><u>U</u></button>
+          <div class="mark-divider"></div>
+          <button class="mark-eraser-btn" id="btnEraser" title="Eraser" onclick="toggleEraser()">&#x2715; Eraser</button>
+          <button class="mark-undo-btn" id="btnUndo" title="Undo last action" onclick="undoMark()" disabled>&#x21A9; Undo</button>
+          <button class="mark-clear-btn" title="Clear all marks" onclick="clearAllMarks()">Clear All</button>
+        </div>
+        <div class="mark-legend">
+          <span class="mark-legend-label">Key Words</span>
+          <button class="legend-chip legend-yellow" onclick="setMarkColor('yellow')">Mind / mindset</button>
+          <button class="legend-chip legend-blue" onclick="setMarkColor('blue')">Form</button>
+          <button class="legend-chip legend-green" onclick="setMarkColor('green')">Himself / he (Christ)</button>
+          <button class="legend-chip legend-rose" onclick="setMarkColor('rose')">Every / all / any</button>
+          <button class="legend-chip legend-orange" onclick="setMarkColor('orange')">Humility / humble</button>
+          <button class="legend-chip legend-purple" onclick="setMarkColor('purple')">God / God the Father</button>
+        </div>
+      </div>
+
+      <!-- Scripture Text — words will be wrapped by JS -->
+      <div class="scripture-body">
+        <div class="scripture-text" id="scriptureText">
+          <p><span class="verse-num">1</span> So if there is any encouragement in Christ, any comfort from love, any participation in the Spirit, any affection and sympathy,</p>
+          <p><span class="verse-num">2</span> complete my joy by being of the same mind, having the same love, being in full accord and of one mind.</p>
+          <p><span class="verse-num">3</span> Do nothing from selfish ambition or conceit, but in humility count others more significant than yourselves.</p>
+          <p><span class="verse-num">4</span> Let each of you look not only to his own interests, but also to the interests of others.</p>
+          <p><span class="verse-num">5</span> Have this mind among yourselves, which is yours in Christ Jesus,</p>
+          <p><span class="verse-num">6</span> who, though he was in the form of God, did not count equality with God a thing to be grasped,</p>
+          <p><span class="verse-num">7</span> but emptied himself, by taking the form of a servant, being born in the likeness of men.</p>
+          <p><span class="verse-num">8</span> And being found in human form, he humbled himself by becoming obedient to the point of death, even death on a cross.</p>
+          <p><span class="verse-num">9</span> Therefore God has highly exalted him and bestowed on him the name that is above every name,</p>
+          <p><span class="verse-num">10</span> so that at the name of Jesus every knee should bow, in heaven and on earth and under the earth,</p>
+          <p><span class="verse-num">11</span> and every tongue confess that Jesus Christ is Lord, to the glory of God the Father.</p>
+        </div>
+      </div>
+
+      <div class="mark-hint">Click a word to mark it · Drag to highlight a phrase · <kbd>B</kbd> bold · <kbd>U</kbd> underline · <kbd>Ctrl+Z</kbd> undo</div>
+    </div>
+    <div class="notes-area">
+      <label for="readNotes">Notes</label>
+      <textarea id="readNotes" placeholder="What did you notice? What surprised you?"></textarea>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ====== OBSERVE ====== -->
+  <section class="section" id="observe">
+    <div class="section-header">
+      <div class="section-label">Observe</div>
+      <h2 class="section-title">What Does the Passage Actually Say?</h2>
+      <div class="section-subtitle">Before we interpret, we observe. These exercises put you directly in the text with a pen in hand. Work through them carefully — this is where discovery happens.</div>
+    </div>
+    <!-- Task 1: The Foundation -->
+    <h3 class="subsection-title">1. The Foundation: What Has Been Given? (vv. 1–4)</h3>
+    <div class="prose">
+      <p>Read verse 1 carefully. Paul lists four realities that believers have already experienced in Christ. Write them out.</p>
+    </div>
+
+    <div class="sand-band">
+      <div class="question-item">
+        <div class="question-label">
+          <span class="question-letter">a.</span>
+          <span class="question-text">List the four realities Paul names in verse 1:</span>
+        </div>
+        <textarea class="question-input short" placeholder="1."></textarea>
+        <textarea class="question-input short" placeholder="2."></textarea>
+        <textarea class="question-input short" placeholder="3."></textarea>
+        <textarea class="question-input short" placeholder="4."></textarea>
+      </div>
+
+      <div class="question-item">
+        <div class="question-label">
+          <span class="question-letter">b.</span>
+          <span class="question-text">Now look at verses 2–4. Based on what’s been given (v. 1), what does Paul ask them to do? What two things does he tell them to avoid (v. 3), and what does he put in their place?</span>
+        </div>
+        <textarea class="question-input long" placeholder="What does Paul command, prohibit, and replace?"></textarea>
+      </div>
+    </div>
+
+    <div class="notice">
+      <p>Paul doesn’t start with a command. He starts with what they’ve already received. The command grows out of the gift.</p>
+    </div>
+    <!-- Task 2: Trace the Descent -->
+    <h3 class="subsection-title">2. Trace the Descent (vv. 5–8)</h3>
+    <div class="prose">
+      <p>Mark every action Christ takes in verses 6–8. List them in order as a sequence — a series of steps. Who is the subject of each action? What direction is the movement — up or down?</p>
+    </div>
+
+    <div class="sand-band">
+      <div class="question-item">
+        <div class="question-label">
+          <span class="question-letter">a.</span>
+          <span class="question-text">List every action Christ takes in verses 6–8, in order:</span>
+        </div>
+        <textarea class="question-input long" placeholder="List the actions in sequence…"></textarea>
+      </div>
+
+      <div class="question-item">
+        <div class="question-label">
+          <span class="question-letter">b.</span>
+          <span class="question-text">Now look at the word “form” (blue). Where does it appear? What is Christ in the form of in verse 6? What does He take the form of in verse 7?</span>
+        </div>
+        <textarea class="question-input medium" placeholder="Compare the two uses of ‘form’…"></textarea>
+      </div>
+    </div>
+
+    <div class="notice">
+      <p>If the same word is used for both — what might that tell you about the relationship between who Christ is and what He chose to become?</p>
+    </div>
+    <!-- Task 3: Map the Reversal -->
+    <h3 class="subsection-title">3. Map the Reversal (vv. 9–11)</h3>
+    <div class="prose">
+      <p>Read verses 9–11 carefully. Who is acting now? (Compare this to who was acting in vv. 6–8.)</p>
+    </div>
+
+    <div class="sand-band">
+      <div class="question-item">
+        <div class="question-label">
+          <span class="question-letter">a.</span>
+          <span class="question-text">List what God does in response to Christ’s descent. What does He give? What is the result?</span>
+        </div>
+        <textarea class="question-input medium" placeholder="What does God do in vv. 9–11?"></textarea>
+      </div>
+
+      <div class="question-item">
+        <div class="question-label">
+          <span class="question-letter">b.</span>
+          <span class="question-text">Look at how the passage opened (vv. 1–2) — the words “any” and “every” appear there. Now look at verses 10–11. What words reappear? What connection do you see between the opening appeal and the closing declaration?</span>
+        </div>
+        <textarea class="question-input medium" placeholder="What connection do you see?"></textarea>
+      </div>
+    </div>
+    <!-- IF TIME ALLOWS -->
+    <h3 class="subsection-title" style="margin-top: 2.5rem; color: var(--muted);">If Time Allows</h3>
+
+    <div class="prose">
+      <p><em style="color: var(--muted);">This task deepens the observation but is not required. If time is short, move to Interpret — the insight will surface there.</em></p>
+    </div>
+
+    <h3 class="subsection-title">4. The Hinge (v. 5)</h3>
+    <div class="sand-band">
+      <div class="question-item">
+        <div class="question-label">
+          <span class="question-letter">a.</span>
+          <span class="question-text">Look at verse 5 again. What connects Paul’s instructions in verses 1–4 to the Christ Hymn in verses 6–11? Is Paul asking them to adopt a set of behaviors, or a mindset? How does this change how you read vv. 6–11 — as theology about Christ or as a pattern for life?</span>
+        </div>
+        <textarea class="question-input long" placeholder="What role does verse 5 play?"></textarea>
+      </div>
+    </div>
+
+    <div class="notice">
+      <p>What you’ve been practicing — marking key words, tracing patterns, listing actions in sequence, comparing the beginning and end of a passage — these are tools that work in any passage. You’re learning how to study the Bible, not just Philippians.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ====== INTERPRET ====== -->
+  <section class="section" id="interpret">
+    <div class="section-header">
+      <div class="section-label">Interpret</div>
+      <h2 class="section-title">What Does This Mean?</h2>
+      <div class="section-subtitle">Now that you’ve observed what the text says, it’s time to ask what it means. The Greek insights below confirm and deepen what you’ve already noticed. Greek terms include a reference number (like G3444) — these link directly to the word’s full entry on BibleHub, where you can explore the original language behind the English. They’re breadcrumbs for further study, not required reading.</div>
+    </div>
+    <!-- Interpret 1: The Fourfold Appeal -->
+    <h3 class="subsection-title">1. The Fourfold Appeal: Why Humility Is Possible (vv. 1–4)</h3>
+
+    <div class="prose">
+      <p>You listed four realities in verse 1. Paul grounds everything that follows in what believers have already received — encouragement that comes from being in Christ, comfort that flows from His love, shared life through the Spirit, and visceral tenderness that moves to action. These are experienced realities, not abstract ideals. Paul’s logic is precise: because you have received this, live this way.</p>
+    </div>
+
+    <div class="discussion">
+      <p>If humility is grounded in what we’ve received from Christ — what happens to humility when someone tries to produce it from willpower alone?</p>
+    </div>
+    <div class="prose">
+      <p>The two impulses Paul opposes in verse 3 are sharp. <strong>Selfish ambition</strong> <a class="inline-strongs-link" href="https://biblehub.com/greek/2052.htm" target="_blank" rel="noopener" title="View G2052 on BibleHub">(G2052)</a> originally carried political overtones — jockeying for position, canvassing for influence. It’s the drive to advance yourself even in good work. <strong>Conceit</strong> <a class="inline-strongs-link" href="https://biblehub.com/greek/2754.htm" target="_blank" rel="noopener" title="View G2754 on BibleHub">(G2754)</a> literally means “empty glory” — seeking validation where there is no substance. It’s the need to be noticed or admired in order to feel whole. Paul calls it empty because only God’s glory satisfies; everything else is a shadow.</p>
+
+      <p>Against these, Paul sets humility — counting others as <strong>more significant</strong> <a class="inline-strongs-link" href="https://biblehub.com/greek/5242.htm" target="_blank" rel="noopener" title="View G5242 on BibleHub">(G5242)</a>. This is a deliberate posture, not self-loathing. It means your worth is already secured in Christ, so another person’s flourishing is a joy rather than a threat.</p>
+
+      <p><em>Paul has named the foundation and the posture. Now verse 5 turns the corner — from the community’s disposition to the person who defines it.</em></p>
+    </div>
+
+    <!-- Interpret 2: The Descent -->
+    <h3 class="subsection-title">2. The Descent: Christ as the Pattern (vv. 5–8)</h3>
+
+    <div class="prose">
+      <p>You traced Christ’s actions and saw the downward sequence. You noticed that “form” appears twice — once for God, once for a servant.</p>
+    </div>
+
+    <div class="discussion">
+      <p>What does it mean that the same word describes both? If Christ’s “form of God” tells us something about His nature — what does His “form of a servant” tell us?</p>
+    </div>
+    <div class="word-study">
+      <div class="word-study-term">form <a class="strongs-link" href="https://biblehub.com/greek/3444.htm" target="_blank" rel="noopener" title="View G3444 on BibleHub">(G3444)</a></div>
+      <div class="word-study-def">
+        <p>The outward expression that corresponds to and reveals inner reality — essential nature made visible. Paul uses it twice: “form of God” (v. 6) and “form of a servant” (v. 7). The same word for both. Christ’s servanthood is just as real and just as revealing of His character as His divine glory. The servant form does not conceal who God is. It displays who God is.</p>
+      </div>
+    </div>
+
+    <div class="word-study">
+      <div class="word-study-term">mind <a class="strongs-link" href="https://biblehub.com/greek/5426.htm" target="_blank" rel="noopener" title="View G5426 on BibleHub">(G5426)</a></div>
+      <div class="word-study-def">
+        <p>More than thinking — a settled disposition, an orientation that governs how you see and respond to the world. Paul uses this word ten times in Philippians. It’s a thread through the entire letter. When he says “have this mind,” he’s pointing to Christ’s entire orientation — downward, others-focused, self-giving — and saying: this disposition is yours to live from.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>Christ did not count equality with God “a thing to be <strong>grasped</strong>” <a class="inline-strongs-link" href="https://biblehub.com/greek/725.htm" target="_blank" rel="noopener" title="View G725 on BibleHub">(G725)</a> — something to exploit or leverage. The contrast with Adam is striking: in Eden, Adam reached for godlikeness; Christ, already being God, released His grip. The downward movement begins from strength choosing surrender — divine authority wielded with restraint.</p>
+
+      <p>He <strong>emptied himself</strong> <a class="inline-strongs-link" href="https://biblehub.com/greek/2758.htm" target="_blank" rel="noopener" title="View G2758 on BibleHub">(G2758)</a> — a word that means to pour out or make of no account. This is not subtraction of deity but addition of servanthood. He didn’t become less God. He took on more — the full weight of human limitation, dependence, and suffering. Each step descends further: form of a servant, born in human likeness, found in human form, humbled himself, became obedient to death — even death on a cross. That final phrase is a shudder. Crucifixion was Rome’s punishment for the lowest — slaves, rebels, enemies of the state. For Christ to end there was the most complete inversion of status imaginable.</p>
+    </div>
+    <!-- Interpret 3: The Vindication -->
+    <h3 class="subsection-title">3. The Vindication: God’s Response (vv. 9–11)</h3>
+
+    <div class="prose">
+      <p>You mapped the reversal and saw the shift: in verses 6–8, Christ acts — choosing descent. In verses 9–11, God acts.</p>
+    </div>
+
+    <div class="discussion">
+      <p>The passage moves from Christ choosing to go down (vv. 6–8) to God lifting Him up (vv. 9–11). What does that pattern suggest about how God’s kingdom works — and how it differs from the way the world works?</p>
+    </div>
+    <div class="prose">
+      <p>The original language sharpens the pattern you just described. The word <strong>therefore</strong> <a class="inline-strongs-link" href="https://biblehub.com/greek/1352.htm" target="_blank" rel="noopener" title="View G1352 on BibleHub">(G1352)</a> in verse 9 is the hinge. Because Christ descended to the uttermost depths, God elevated Him to the uttermost heights. This is vindication — public recognition of who He always was.</p>
+
+      <p>The <strong>name above every name</strong> is almost certainly “Lord” — the Greek word that translates YHWH, the covenant name of Israel’s God. Paul is making an extraordinary claim: Jesus shares the identity of Israel’s God. And he anchors it in the Old Testament. Verses 10–11 echo <span class="bible-ref" data-ref="isa-45-22-23" data-url="https://biblehub.com/esv/isaiah/45.htm" data-display="Isaiah 45:22–23">Isaiah 45:22–23</span>, where YHWH declares that every knee will bow to Him alone. Paul takes that declaration and applies it to Jesus — the crucified servant is the Lord of all creation.</p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ====== APPLY ====== -->
+  <section class="section" id="apply">
+    <div class="section-header">
+      <div class="section-label">Apply</div>
+      <h2 class="section-title">How Does This Truth Confront or Shape Me?</h2>
+      <div class="section-subtitle">This is where the passage moves from the page to the heart. The goal isn’t to generate guilt or manufacture emotion. It’s to create space for the Holy Spirit to press truth into the places where you actually live.</div>
+    </div>
+    <h3 class="subsection-title">Quiet Reflection</h3>
+    <div class="instruction">Read through the passage one more time on your own. Then sit with these questions:</div>
+
+    <div class="reflection-item">
+      <div class="reflection-number">1</div>
+      <div class="reflection-question">Where are you grasping — for status, recognition, control, or comfort — instead of releasing? Be specific. Name the situation, the relationship, or the role where your grip is tightest.</div>
+      <textarea class="reflection-input" placeholder="Be specific…"></textarea>
+    </div>
+
+    <div class="reflection-item">
+      <div class="reflection-number">2</div>
+      <div class="reflection-question">Paul grounds the call to humility in what you’ve already received from Christ (v. 1). When you serve others, does your service flow from the security of being loved — or from the need to be noticed? What’s the difference between those two in your own life?</div>
+      <textarea class="reflection-input" placeholder="What drives your service?"></textarea>
+    </div>
+
+    <div class="reflection-item">
+      <div class="reflection-number">3</div>
+      <div class="reflection-question">The passage says Christ’s descent led to His exaltation. But He didn’t descend <em>in order to</em> be exalted — He descended out of love and obedience. Where are you willing to go low only if the payoff is guaranteed?</div>
+      <textarea class="reflection-input" placeholder="Where do you demand a guarantee?"></textarea>
+    </div>
+    <!-- Prayer -->
+    <h3 class="subsection-title">Prayer</h3>
+    <div class="instruction">Close with prayer shaped by the passage:</div>
+
+    <div class="prayer-block">
+      <div class="prayer-text">
+        Father, we stand in the shadow of a mystery — that the God of all creation chose to descend. That glory expressed itself in servanthood. That the cross, not the throne, is where Your heart was most fully revealed. Forgive us for grasping when You have already given us everything we need. Forgive us for climbing when You have called us downward. Teach us the mind of Christ — to count others as more significant, to release our grip on status and comfort, and to trust that You vindicate what the world overlooks. Fill us so completely with Your encouragement, Your love, Your Spirit, and Your tender compassion that humility becomes our freedom — not our burden. At the name of Jesus, every knee will bow. Until that day, let us be people who bow first. Amen.
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ====== ACTION STEPS ====== -->
+  <section class="section" id="action">
+    <div class="section-header">
+      <div class="section-label">Action Steps</div>
+      <h2 class="section-title">For the Week</h2>
+      <div class="section-subtitle">These are not busywork. They’re designed to keep you in the passage between sessions — so the text has time to work on you.</div>
+    </div>
+
+    <div class="action-step">
+      <span class="action-day">Days 1–2</span>
+      <div class="action-content">
+        <h4>Read and Mark</h4>
+        <p>Read Philippians 2:1–11 once each day. On Day 1, mark every action Christ takes. On Day 2, mark every action God the Father takes. What pattern emerges between the two?</p>
+        <p><em style="color: var(--muted); font-size: 0.92rem;">If you only do one thing this week, this is it. Re-reading with a pen in hand is the most important habit this study builds.</em></p>
+      </div>
+    </div>
+
+    <div class="action-step">
+      <span class="action-day">Days 3–4</span>
+      <div class="action-content">
+        <h4>Go Deeper</h4>
+        <p>Focus on one of these words: “form,” “emptied,” “humbled,” or “name.” Spend 10 minutes with it — look it up on Blue Letter Bible. <em>(Go to blueletterbible.org, type “Philippians 2” in the search bar, click the verse number, then select “Interlinear” to see the Greek words behind the English. Try clicking the Strong’s number for the word you’re studying.)</em> Where else does Paul use this word? What does it reveal?</p>
+      </div>
+    </div>
+
+    <div class="action-step">
+      <span class="action-day">Day 5</span>
+      <div class="action-content">
+        <h4>Pray the Text</h4>
+        <p>Use verses 9–11 as your prayer — but pray it personally: “At the name of Jesus, let every knee in my life bow — every ambition, every fear, every grasping impulse — and let my tongue confess that Jesus Christ is Lord.” Write down what the Spirit surfaces.</p>
+      </div>
+    </div>
+
+    <div class="action-step">
+      <span class="action-day">Days 6–7</span>
+      <div class="action-content">
+        <h4>Read Ahead</h4>
+        <p>Read Philippians 2:12–18 twice. Don’t study it yet — just read. Notice what connects to what you learned this week. Come to next session with one observation and one question.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ====== APPENDIX ====== -->
+  <section class="section" id="appendix">
+    <div class="appendix-divider">
+      <span class="appendix-divider-label">Appendix</span>
+    </div>
+
+    <div class="instruction" style="margin-top: 0.5rem;">
+      <strong style="color: var(--ink-soft); font-style: normal;">How to Use This Appendix:</strong> These materials are designed for the days between sessions. The Amplified Paraphrase works best alongside your daily re-reading (Days 1–2). The Greek Insights go deeper than the session — use them alongside your word study (Days 3–4). Don’t read this before the group meets; it answers questions you haven’t asked yet.
+    </div>
+
+    <!-- Amplified Paraphrase -->
+    <h3 class="subsection-title" style="margin-top: 2rem;">Take-Home Reading: Amplified Paraphrase</h3>
+    <div class="instruction">An expanded rendering of Philippians 2:1–11. Not a replacement for the text — a companion that opens up what’s already there. Read it alongside your ESV.</div>
+
+    <div class="paraphrase-block">
+      <div class="paraphrase-text">
+        <p><span class="verse-num">1</span> So if there is any encouragement in Christ <span class="amplified">— any steadying, strengthening word that comes from belonging to Him —</span> any comfort from love <span class="amplified">— the relief and settledness of being held by a love you did not earn —</span> any participation in the Spirit <span class="amplified">— any shared life in the Holy Spirit who binds you to God and to each other —</span> any affection and sympathy <span class="amplified">— any of the gut-level tenderness and mercy that moves you toward another person’s pain —</span></p>
+
+        <p><span class="verse-num">2</span> complete my joy by being of the same mind <span class="amplified">— oriented the same direction, seeing through the same lens, shaped by the same Christ —</span> having the same love, being in full accord <span class="amplified">— joined at the deepest level, not merely cooperating but pulled by the same gravity —</span> and of one mind.</p>
+
+        <p><span class="verse-num">3</span> Do nothing from selfish ambition <span class="amplified">— the drive to advance yourself, to jockey for position, to build your reputation even through good work —</span> or conceit <span class="amplified">— empty glory, the craving to be noticed and admired that feeds on shadows and never satisfies —</span> but in humility count others more significant than yourselves <span class="amplified">— the settled freedom of someone who has nothing left to prove, free to lift others because they are already held.</span></p>
+
+        <p><span class="verse-num">4</span> Let each of you look not only to his own interests, but also to the interests of others. <span class="amplified">A quiet, devastating instruction. Not “ignore your own needs” — but stop making them the center. Learn to see what someone else carries.</span></p>
+
+        <p><span class="verse-num">5</span> Have this mind among yourselves <span class="amplified">— adopt this very disposition, this orientation of heart —</span> which is yours in Christ Jesus <span class="amplified">— already given to you in Him, already the shape of the life you’ve entered. What follows is that mind made visible.</span></p>
+
+        <p><span class="verse-num">6</span> Who, though he was in the form of God <span class="amplified">— existing in the full, undiminished expression of divine nature; not resembling God, but sharing His very essence, radiating it —</span> did not count equality with God a thing to be grasped <span class="amplified">— did not treat His divine status as a possession to exploit, a privilege to leverage, a throne to cling to. Where Adam reached for godlikeness, Christ — already being God — opened His hands.</span></p>
+
+        <p><span class="verse-num">7</span> But emptied himself <span class="amplified">— poured Himself out; not by subtracting deity, but by adding servanthood —</span> by taking the form of a servant <span class="amplified">— the same word used for His divine form now used for His servant form; His servanthood is just as real and revealing of His essence as His glory —</span> being born in the likeness of men. <span class="amplified">He entered. He came all the way in.</span></p>
+
+        <p><span class="verse-num">8</span> And being found in human form <span class="amplified">— recognized as fully human, living among us in the vulnerability and limitation we know —</span> he humbled himself by becoming obedient to the point of death <span class="amplified">— each step a further descent, each one freely chosen —</span> even death on a cross. <span class="amplified">The lowest death. The most shameful execution Rome could devise — reserved for slaves, rebels, and enemies of the state. He went there. He chose it. The downward path reached its floor.</span></p>
+
+        <p><span class="verse-num">9</span> Therefore <span class="amplified">— because of this, in direct response to the descent —</span> God has highly exalted him <span class="amplified">— lifted Him to the highest place, beyond all created authority —</span> and bestowed on him the name that is above every name <span class="amplified">— the name that belongs to God alone, the name that Israel’s God declared no one else would carry.</span></p>
+
+        <p><span class="verse-num">10</span> so that at the name of Jesus every knee should bow <span class="amplified">— in heaven, among the angels and powers; on earth, among every living person; and under the earth, among the dead and the spiritual realm — every created being acknowledging what is true —</span></p>
+
+        <p><span class="verse-num">11</span> and every tongue confess that Jesus Christ is Lord <span class="amplified">— the word that translates YHWH, the covenant name of Israel’s God —</span> to the glory of God the Father. <span class="amplified">The crucified servant is the Lord of all creation. And this confession does not diminish the Father’s glory — it completes it. The Son’s descent and exaltation reveal the very heart of God.</span></p>
+      </div>
+    </div>
+
+    <!-- Key Greek Insights -->
+    <h3 class="subsection-title" style="margin-top: 2.5rem;">Key Greek Insights</h3>
+    <div class="instruction">Selected terms for this passage. These go deeper than the session material. Each entry includes cross-references and a prompt for personal study. Use them alongside Blue Letter Bible during Days 3–4.</div>
+
+    <!-- Group 1: The Fourfold Appeal -->
+    <div class="greek-group-title">The Fourfold Appeal (v. 1)</div>
+
+    <div class="greek-card">
+      <div class="greek-card-term">encouragement <a class="strongs-link" href="https://biblehub.com/greek/3874.htm" target="_blank" rel="noopener" title="View G3874 on BibleHub">(G3874)</a></div>
+      <div class="greek-card-def">
+        <p>A word that means to come alongside — to strengthen, steady, and call someone forward. It can mean comfort or exhortation depending on context. Here it describes what happens to a person who is “in Christ” — they are met, steadied, and given courage to continue. The encouragement is not from Paul. It is in Christ Himself.</p>
+      </div>
+      <div class="greek-card-xref">
+        <strong>Cross-reference</strong>
+        <span class="bible-ref" data-ref="acts-4-36" data-url="https://biblehub.com/esv/acts/4.htm" data-display="Acts 4:36">Acts 4:36</span>. Barnabas is called “son of encouragement” (same root). What does it look like when a person becomes an embodiment of this word?
+      </div>
+    </div>
+
+    <div class="greek-card">
+      <div class="greek-card-term">comfort <a class="strongs-link" href="https://biblehub.com/greek/3890.htm" target="_blank" rel="noopener" title="View G3890 on BibleHub">(G3890)</a></div>
+      <div class="greek-card-def">
+        <p>Consolation that comes close — a nearness of love that brings relief and settledness. This is love experienced as refuge. Paul is saying: if God’s love has ever brought you rest, let that rest reshape how you treat others.</p>
+      </div>
+      <div class="greek-card-xref">
+        <strong>Cross-reference</strong>
+        <span class="bible-ref" data-ref="2cor-1-3-4" data-url="https://biblehub.com/esv/2_corinthians/1.htm" data-display="2 Corinthians 1:3–4">2 Corinthians 1:3–4</span>. Paul calls God “the Father of mercies and God of all comfort.” How does this cycle — God comforts you, you comfort others — connect to what Paul is asking of the Philippians in verses 2–4?
+      </div>
+    </div>
+
+    <div class="greek-card">
+      <div class="greek-card-term">participation <a class="strongs-link" href="https://biblehub.com/greek/2842.htm" target="_blank" rel="noopener" title="View G2842 on BibleHub">(G2842)</a></div>
+      <div class="greek-card-def">
+        <p>Shared life, mutual partnership, common ownership. The same word translated “fellowship” and “partnership” elsewhere in Philippians (<span class="bible-ref" data-ref="phil-1-5" data-url="https://biblehub.com/esv/philippians/1.htm" data-display="Philippians 1:5">1:5</span>). Here it describes a shared life with the Holy Spirit — drawn into His presence, participating in His work.</p>
+      </div>
+      <div class="greek-card-xref">
+        <strong>Cross-reference</strong>
+        <span class="bible-ref" data-ref="1cor-1-9" data-url="https://biblehub.com/esv/1_corinthians/1.htm" data-display="1 Corinthians 1:9">1 Corinthians 1:9</span>, <span class="bible-ref" data-ref="2cor-13-14" data-url="https://biblehub.com/esv/2_corinthians/13.htm" data-display="2 Corinthians 13:14">2 Corinthians 13:14</span>. Paul speaks of “participation” with the Son and with the Spirit. What is the “shared thing” in each case?
+      </div>
+    </div>
+
+    <div class="greek-card">
+      <div class="greek-card-term">affection and sympathy <a class="strongs-link" href="https://biblehub.com/greek/4698.htm" target="_blank" rel="noopener" title="View G4698 on BibleHub">(G4698)</a> + <a class="strongs-link" href="https://biblehub.com/greek/3628.htm" target="_blank" rel="noopener" title="View G3628 on BibleHub">(G3628)</a></div>
+      <div class="greek-card-def">
+        <p>Visceral tenderness and compassion that moves to action. The first word refers to the inward organs — gut-level emotion, the deep place where care is felt physically. The second word means mercy that responds. Together they describe the emotional texture of a community shaped by Christ — tender, responsive, moved by one another’s pain.</p>
+      </div>
+    </div>
+
+    <!-- Group 2: The Call to Humility -->
+    <div class="greek-group-title">The Call to Humility (vv. 2–4)</div>
+
+    <div class="greek-card">
+      <div class="greek-card-term">mind / mindset <a class="strongs-link" href="https://biblehub.com/greek/5426.htm" target="_blank" rel="noopener" title="View G5426 on BibleHub">(G5426)</a></div>
+      <div class="greek-card-def">
+        <p>To set one’s orientation, to adopt a governing disposition. Paul uses this word ten times in Philippians. It’s the thread that runs through the whole letter. In 2:2 he uses it twice: “be of the same mind… of one mind.” In 2:5 he says “have this mind among yourselves.” This is not about thinking the same thoughts. It is about sharing the same orientation — a way of seeing shaped by Christ’s own posture.</p>
+      </div>
+      <div class="greek-card-xref">
+        <strong>Cross-reference</strong>
+        <span class="bible-ref" data-ref="phil-3-15" data-url="https://biblehub.com/esv/philippians/3.htm" data-display="Philippians 3:15">Philippians 3:15</span> and <span class="bible-ref" data-ref="phil-4-2" data-url="https://biblehub.com/esv/philippians/4.htm" data-display="Philippians 4:2">4:2</span>. Paul uses this same word for mature thinking and for reconciliation between Euodia and Syntyche. What does it tell you that this one word connects humility, maturity, and peacemaking?
+      </div>
+    </div>
+
+    <div class="greek-card">
+      <div class="greek-card-term">selfish ambition <a class="strongs-link" href="https://biblehub.com/greek/2052.htm" target="_blank" rel="noopener" title="View G2052 on BibleHub">(G2052)</a></div>
+      <div class="greek-card-def">
+        <p>Originally a political word — the self-seeking of a person canvassing for office, jockeying for position, advancing their own cause. Paul places it as the opposite of Christ-mindedness.</p>
+      </div>
+      <div class="greek-card-xref">
+        <strong>Cross-reference</strong>
+        <span class="bible-ref" data-ref="phil-1-17" data-url="https://biblehub.com/esv/philippians/1.htm" data-display="Philippians 1:17">Philippians 1:17</span>. Paul used this same word for those preaching Christ from selfish ambition while he was in prison. How does the word connect chapters 1 and 2?
+      </div>
+    </div>
+
+    <div class="greek-card">
+      <div class="greek-card-term">conceit <a class="strongs-link" href="https://biblehub.com/greek/2754.htm" target="_blank" rel="noopener" title="View G2754 on BibleHub">(G2754)</a></div>
+      <div class="greek-card-def">
+        <p>Literally, “empty glory” — the craving for recognition that feeds on what has no substance. Paul calls it empty because only God’s glory satisfies. Everything else is a shadow that vanishes when the light arrives.</p>
+      </div>
+    </div>
+
+    <div class="greek-card">
+      <div class="greek-card-term">more significant <a class="strongs-link" href="https://biblehub.com/greek/5242.htm" target="_blank" rel="noopener" title="View G5242 on BibleHub">(G5242)</a></div>
+      <div class="greek-card-def">
+        <p>To surpass, to hold in higher regard. The posture of counting others as more significant is not self-deprecation — it’s the freedom of someone whose identity is already established. When your worth is secured in Christ, another person’s flourishing becomes a joy rather than a threat.</p>
+      </div>
+    </div>
+
+    <!-- Group 3: The Descent of Christ -->
+    <div class="greek-group-title">The Descent of Christ (vv. 5–8)</div>
+
+    <div class="greek-card">
+      <div class="greek-card-term">form <a class="strongs-link" href="https://biblehub.com/greek/3444.htm" target="_blank" rel="noopener" title="View G3444 on BibleHub">(G3444)</a></div>
+      <div class="greek-card-def">
+        <p>One of the most important words in the passage. It means the outward expression that corresponds to and reveals inner reality — essential nature made visible. Paul uses it twice: “form of God” (v. 6) and “form of a servant” (v. 7). The same word for both. Christ’s servanthood is just as real and just as revealing of His character as His divine glory. The servant form does not conceal who God is. It displays who God is.</p>
+      </div>
+      <div class="greek-card-xref">
+        <strong>For further study</strong>
+        <span class="bible-ref" data-ref="mark-16-12" data-url="https://biblehub.com/esv/mark/16.htm" data-display="Mark 16:12">Mark 16:12</span> is the only other NT use of this word — Jesus appeared “in another form” after the resurrection. How does that usage inform what “form” means in Philippians 2?
+      </div>
+    </div>
+
+    <div class="greek-card">
+      <div class="greek-card-term">grasped <a class="strongs-link" href="https://biblehub.com/greek/725.htm" target="_blank" rel="noopener" title="View G725 on BibleHub">(G725)</a></div>
+      <div class="greek-card-def">
+        <p>Something seized, clutched, or exploited — like plunder or a trophy gripped tightly. Christ did not treat His equality with God as a possession to leverage. He held it with open hands. The contrast with Adam is sharp: Adam reached for what was not his; Christ released what was rightfully His.</p>
+      </div>
+      <div class="greek-card-xref">
+        <strong>Cross-reference</strong>
+        <span class="bible-ref" data-ref="gen-3-5-6" data-url="https://biblehub.com/esv/genesis/3.htm" data-display="Genesis 3:5–6">Genesis 3:5–6</span>. What did Adam and Eve reach for? What did they expect it to give them? How does Christ’s posture in Philippians 2:6 reverse that impulse?
+      </div>
+    </div>
+
+    <div class="greek-card">
+      <div class="greek-card-term">emptied <a class="strongs-link" href="https://biblehub.com/greek/2758.htm" target="_blank" rel="noopener" title="View G2758 on BibleHub">(G2758)</a></div>
+      <div class="greek-card-def">
+        <p>To pour out, to make of no account, to render void of advantage. Christ emptied Himself — not by subtracting His divine nature, but by adding the full weight of human limitation and servanthood. He did not become less God. He took on more — dependence, vulnerability, suffering. The pouring out was not loss of identity but overflow of love.</p>
+      </div>
+      <div class="greek-card-xref">
+        <strong>Cross-reference</strong>
+        <span class="bible-ref" data-ref="isa-53-12" data-url="https://biblehub.com/esv/isaiah/53.htm" data-display="Isaiah 53:12">Isaiah 53:12</span>. The Suffering Servant “poured out his soul to death.” How does Isaiah’s language illuminate what Paul means by “emptied”?
+      </div>
+    </div>
+
+    <div class="greek-card">
+      <div class="greek-card-term">humble <a class="strongs-link" href="https://biblehub.com/greek/5013.htm" target="_blank" rel="noopener" title="View G5013 on BibleHub">(G5013)</a></div>
+      <div class="greek-card-def">
+        <p>To bring low, to take a lower position voluntarily. In the Greco-Roman world, humility was weakness — the mark of someone who had no choice. Paul redefines it: Christ’s humbling is an act of strength. He descends deliberately, freely, from a position of supreme authority.</p>
+      </div>
+    </div>
+
+    <div class="greek-card">
+      <div class="greek-card-term">obedient <a class="strongs-link" href="https://biblehub.com/greek/5255.htm" target="_blank" rel="noopener" title="View G5255 on BibleHub">(G5255)</a></div>
+      <div class="greek-card-def">
+        <p>Submissive, responsive to authority — literally, to place oneself under the hearing of another. Christ aligned Himself fully with the Father’s will, even when that will led to crucifixion. This is the deepest expression of trust — trusting that the Father’s purpose is worth the cost.</p>
+      </div>
+      <div class="greek-card-xref">
+        <strong>Cross-reference</strong>
+        <span class="bible-ref" data-ref="heb-5-8" data-url="https://biblehub.com/esv/hebrews/5.htm" data-display="Hebrews 5:8">Hebrews 5:8</span>. “Although he was a son, he learned obedience through what he suffered.” What does it mean that the eternal Son “learned” obedience? What does that suggest about obedience as lived experience rather than abstract duty?
+      </div>
+    </div>
+
+    <!-- Group 4: The Exaltation -->
+    <div class="greek-group-title">The Exaltation (vv. 9–11)</div>
+
+    <div class="greek-card">
+      <div class="greek-card-term">therefore <a class="strongs-link" href="https://biblehub.com/greek/1352.htm" target="_blank" rel="noopener" title="View G1352 on BibleHub">(G1352)</a></div>
+      <div class="greek-card-def">
+        <p>A small word carrying enormous weight. It means “for this very reason” — connecting Christ’s descent directly to God’s response. Because He went to the lowest place, God lifted Him to the highest. The exaltation is vindication — the Father publicly recognizing who Christ always was and what His descent accomplished.</p>
+      </div>
+    </div>
+
+    <div class="greek-card">
+      <div class="greek-card-term">highly exalted <a class="strongs-link" href="https://biblehub.com/greek/5251.htm" target="_blank" rel="noopener" title="View G5251 on BibleHub">(G5251)</a></div>
+      <div class="greek-card-def">
+        <p>A word used only here in the entire New Testament. The prefix intensifies: not merely exalted, but super-exalted, raised to the highest conceivable position. This is not promotion — Christ did not earn a new status. It is revelation — God making visible to all creation what was true from eternity.</p>
+      </div>
+      <div class="greek-card-xref">
+        <strong>Cross-reference</strong>
+        <span class="bible-ref" data-ref="acts-2-33" data-url="https://biblehub.com/esv/acts/2.htm" data-display="Acts 2:33">Acts 2:33</span>. Peter uses “exalted” (without the intensified prefix) for Christ’s position at the Father’s right hand. How does Paul’s intensified form add theological weight?
+      </div>
+    </div>
+
+    <div class="greek-card">
+      <div class="greek-card-term">name <a class="strongs-link" href="https://biblehub.com/greek/3686.htm" target="_blank" rel="noopener" title="View G3686 on BibleHub">(G3686)</a></div>
+      <div class="greek-card-def">
+        <p>In Scripture, a name represents the person’s character, authority, and presence. The “name above every name” is almost certainly “Lord” — the Greek translation of YHWH, the covenant name of Israel’s God. God bestowed on Jesus the name that He declared in Isaiah belongs to Him alone. This is the revelation that the crucified Jesus shares the identity of Israel’s God.</p>
+      </div>
+      <div class="greek-card-xref">
+        <strong>For further study</strong>
+        Explore the “name theology” thread in the Old Testament — <span class="bible-ref" data-ref="deut-12-11" data-url="https://biblehub.com/esv/deuteronomy/12.htm" data-display="Deuteronomy 12:11">Deuteronomy 12:11</span> (God’s name dwelling in a place), <span class="bible-ref" data-ref="john-2-19-21" data-url="https://biblehub.com/esv/john/2.htm" data-display="John 2:19–21">John 2:19–21</span>. How does Jesus fulfill what the temple anticipated — as the place where God’s name and presence truly dwell?
+      </div>
+    </div>
+
+    <div class="greek-card">
+      <div class="greek-card-term">Lord <a class="strongs-link" href="https://biblehub.com/greek/2962.htm" target="_blank" rel="noopener" title="View G2962 on BibleHub">(G2962)</a></div>
+      <div class="greek-card-def">
+        <p>The title that translates the divine name YHWH in the Greek Old Testament. When Paul says “every tongue confess that Jesus Christ is Lord,” he is making the most extraordinary claim in the New Testament: the carpenter from Nazareth, crucified under Pontius Pilate, shares the identity and authority of the God who brought Israel out of Egypt. This confession is the heart of early Christian faith (<span class="bible-ref" data-ref="rom-10-9" data-url="https://biblehub.com/esv/romans/10.htm" data-display="Romans 10:9">Romans 10:9</span>).</p>
+      </div>
+    </div>
+
+    <div class="greek-card">
+      <div class="greek-card-term">bow <a class="strongs-link" href="https://biblehub.com/greek/2578.htm" target="_blank" rel="noopener" title="View G2578 on BibleHub">(G2578)</a></div>
+      <div class="greek-card-def">
+        <p>To bend the knee — a posture of submission, worship, and recognition. Paul draws directly from <span class="bible-ref" data-ref="isa-45-22-23" data-url="https://biblehub.com/esv/isaiah/45.htm" data-display="Isaiah 45:22–23">Isaiah 45:22–23</span>, where YHWH declares that every knee will bow to Him alone. By applying this to Jesus, Paul places Christ within the identity of Israel’s one God. The descent to the cross leads to the worship of all creation.</p>
+      </div>
+    </div>
+
+    <div class="greek-card">
+      <div class="greek-card-term">glory <a class="strongs-link" href="https://biblehub.com/greek/1391.htm" target="_blank" rel="noopener" title="View G1391 on BibleHub">(G1391)</a></div>
+      <div class="greek-card-def">
+        <p>Weight, splendor, the visible radiance of God’s character and presence. The passage ends where it began — with God. Christ’s exaltation as Lord does not compete with the Father’s glory. It reveals it. The Son’s descent and the Father’s response together display the heart of the triune God: divine power expressed through self-giving love, and divine glory completed through the vindication of the servant who went lowest.</p>
+      </div>
+      <div class="greek-card-xref">
+        <strong>Cross-reference</strong>
+        <span class="bible-ref" data-ref="john-17-1" data-url="https://biblehub.com/esv/john/17.htm" data-display="John 17:1">John 17:1</span>, <span class="bible-ref" data-ref="john-17-5" data-url="https://biblehub.com/esv/john/17.htm" data-display="John 17:5">17:5</span>. Jesus prays to be glorified with the glory He had “before the world existed.” How does this prayer illuminate the movement of Philippians 2:6–11 — from pre-existent glory, through descent, to restored and revealed glory?
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <div class="study-footer">
+    <p>Philippians: A Verse-by-Verse Bible Study · Week 3 · Participant Handout<br>
+    Observe · Interpret · Apply<br>
+    <a href="index.html" style="color: var(--teal); text-decoration: none; font-weight: 500;">&#8592; Back to Home</a></p>
+  </div>
+
+</main>
+
+<div class="save-banner">
+  <span class="save-status" id="saveStatus">Saved ✓</span>
+  <button class="save-btn save-btn-secondary" onclick="window.print()" title="Print or save as PDF">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 6,2 18,2 18,9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    PDF
+  </button>
+  <button class="save-btn save-btn-secondary" onclick="exportWork()" title="Download your work as a file you can reimport later">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17,8 12,3 7,8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+    Backup
+  </button>
+  <button class="save-btn save-btn-secondary" id="importBtn" onclick="document.getElementById('importFile').click()" title="Restore from a previous backup">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Restore
+  </button>
+  <input type="file" id="importFile" accept=".json" style="display:none" onchange="importWork(event)">
+  <button class="save-btn" id="saveBtn" onclick="saveResponses()" title="Save to this browser">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17,21 17,13 7,13 7,21"/><polyline points="7,3 7,8 15,8"/></svg>
+    Save
+  </button>
+</div>
+
+
+<script>
+  // ====== STICKY NAV SCROLL BEHAVIOR ======
+  const navBar = document.getElementById('navBar');
+  const navItems = document.querySelectorAll('.nav-item');
+  const sections = document.querySelectorAll('section[id]');
+
+  window.addEventListener('scroll', () => {
+    // Shadow on scroll
+    navBar.classList.toggle('scrolled', window.scrollY > 100);
+
+    // Active section tracking
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navItems.forEach(item => {
+      item.classList.remove('active');
+      if (item.getAttribute('href') === '#' + current) {
+        item.classList.add('active');
+      }
+    });
+  });
+
+  // ====== AUTO-SAVE TO LOCAL STORAGE ======
+  const STORAGE_KEY = 'philippians-week3-participant';
+
+  function getAllInputs() {
+    return document.querySelectorAll('input[type="text"], textarea');
+  }
+
+  // Save
+  function saveResponses() {
+    const data = {};
+    getAllInputs().forEach((el, i) => {
+      if (el.value.trim()) {
+        data['field_' + i] = el.value;
+      }
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+
+    const status = document.getElementById('saveStatus');
+    status.textContent = 'Saved ✓';
+    status.classList.add('visible');
+    setTimeout(() => status.classList.remove('visible'), 2000);
+  }
+
+  // Export all work to a downloadable JSON file
+  function exportWork() {
+    const answers = {};
+    getAllInputs().forEach((el, i) => {
+      if (el.value.trim()) {
+        answers['field_' + i] = el.value;
+      }
+    });
+
+    const marks = {};
+    document.querySelectorAll('.s-word').forEach(w => {
+      const classes = Array.from(w.classList).filter(c => c !== 's-word');
+      if (classes.length > 0) {
+        marks[w.dataset.idx] = classes;
+      }
+    });
+
+    const exportData = {
+      study: 'Philippians Week 3',
+      edition: 'Participant',
+      exportedAt: new Date().toISOString(),
+      answers: answers,
+      marks: marks
+    };
+
+    const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'philippians-week3-participant-' + new Date().toISOString().slice(0,10) + '.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    const status = document.getElementById('saveStatus');
+    status.textContent = 'Exported \u2193';
+    status.classList.add('visible');
+    setTimeout(() => status.classList.remove('visible'), 2500);
+  }
+
+  // Import work from a JSON file
+  function importWork(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      try {
+        const data = JSON.parse(e.target.result);
+
+        if (data.answers) {
+          getAllInputs().forEach((el, i) => {
+            if (data.answers['field_' + i]) {
+              el.value = data.answers['field_' + i];
+              if (el.tagName === 'TEXTAREA') {
+                el.style.height = 'auto';
+                el.style.height = el.scrollHeight + 'px';
+              }
+            }
+          });
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(data.answers));
+        }
+
+        if (data.marks) {
+          document.querySelectorAll('.s-word').forEach(w => { w.className = 's-word'; });
+          Object.entries(data.marks).forEach(([idx, classes]) => {
+            const el = document.querySelector('.s-word[data-idx="' + idx + '"]');
+            if (el) classes.forEach(c => el.classList.add(c));
+          });
+          localStorage.setItem(MARKS_KEY, JSON.stringify(data.marks));
+        }
+
+        const status = document.getElementById('saveStatus');
+        status.textContent = 'Imported \u2713';
+        status.classList.add('visible');
+        setTimeout(() => status.classList.remove('visible'), 2500);
+      } catch (err) {
+        alert('Could not read that file. Make sure it is a valid export file.');
+      }
+    };
+    reader.readAsText(file);
+    event.target.value = '';
+  }
+
+  // Load
+  function loadResponses() {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return;
+    try {
+      const data = JSON.parse(raw);
+      getAllInputs().forEach((el, i) => {
+        if (data['field_' + i]) {
+          el.value = data['field_' + i];
+        }
+      });
+    } catch (e) { /* ignore parse errors */ }
+  }
+
+  // Auto-save on input (debounced)
+  let saveTimeout;
+  document.addEventListener('input', (e) => {
+    if (e.target.matches('input, textarea')) {
+      clearTimeout(saveTimeout);
+      saveTimeout = setTimeout(saveResponses, 2000);
+    }
+  });
+
+  // Auto-resize textareas
+  document.addEventListener('input', (e) => {
+    if (e.target.tagName === 'TEXTAREA') {
+      e.target.style.height = 'auto';
+      e.target.style.height = e.target.scrollHeight + 'px';
+    }
+  });
+
+  // Load on page ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadResponses);
+  } else {
+    loadResponses();
+  }
+
+  // ====== SCRIPTURE MARKING SYSTEM ======
+  const MARKS_KEY = 'philippians-week3-participant-marks';
+  let activeColor = 'yellow';
+  let activeBold = false;
+  let activeUnderline = false;
+  let eraserMode = false;
+  let isDragging = false;
+  let dragStartIdx = null;
+  let undoStack = [];  // Stack of {indices: [{idx, prevClasses}]} snapshots
+  const MAX_UNDO = 50;
+
+  // Wrap every text node word in the scripture into clickable spans
+  function wrapScriptureWords() {
+    const container = document.getElementById('scriptureText');
+    if (!container) return;
+    const paragraphs = container.querySelectorAll('p');
+    let wordIndex = 0;
+
+    paragraphs.forEach(p => {
+      const newContent = [];
+      p.childNodes.forEach(node => {
+        if (node.nodeType === 1) {
+          // Element node — keep as-is (verse numbers, etc.)
+          newContent.push(node.outerHTML);
+        } else if (node.nodeType === 3) {
+          // Text node — wrap each word
+          const text = node.textContent;
+          const tokens = text.match(/\S+|\s+/g) || [];
+          tokens.forEach(token => {
+            if (token.trim() === '') {
+              newContent.push(token);
+            } else {
+              newContent.push('<span class="s-word" data-idx="' + wordIndex + '">' + token + '</span>');
+              wordIndex++;
+            }
+          });
+        }
+      });
+      p.innerHTML = newContent.join('');
+    });
+  }
+
+  // Toolbar: set highlight color
+  function setMarkColor(color, scrollToScripture) {
+    activeColor = color;
+    eraserMode = false;
+    document.getElementById('btnEraser').classList.remove('active');
+    document.getElementById('scriptureText').classList.remove('eraser-mode');
+    document.querySelectorAll('.mark-color-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.color === color);
+    });
+    // If called from keyword chips, scroll scripture into view
+    if (scrollToScripture) {
+      const block = document.getElementById('scriptureBlock');
+      if (block) {
+        block.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }
+
+  // Toolbar: toggle bold/underline
+  function toggleMarkStyle(style) {
+    if (style === 'bold') {
+      activeBold = !activeBold;
+      document.getElementById('btnBold').classList.toggle('active', activeBold);
+    } else {
+      activeUnderline = !activeUnderline;
+      document.getElementById('btnUnderline').classList.toggle('active', activeUnderline);
+    }
+  }
+
+  // Toolbar: toggle eraser
+  function toggleEraser() {
+    eraserMode = !eraserMode;
+    document.getElementById('btnEraser').classList.toggle('active', eraserMode);
+    document.getElementById('scriptureText').classList.toggle('eraser-mode', eraserMode);
+    // Deactivate color buttons visually
+    if (eraserMode) {
+      document.querySelectorAll('.mark-color-btn').forEach(btn => btn.classList.remove('active'));
+    } else {
+      // Reactivate current color
+      document.querySelectorAll('.mark-color-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.color === activeColor);
+      });
+    }
+  }
+
+  // Clear all marks
+  function clearAllMarks() {
+    // Capture full undo snapshot before clearing
+    const snapshot = [];
+    document.querySelectorAll('.s-word').forEach(w => {
+      if (w.className !== 's-word') {
+        snapshot.push({ idx: parseInt(w.dataset.idx), prevClasses: w.className });
+      }
+      w.className = 's-word';
+    });
+    if (snapshot.length > 0) {
+      undoStack.push(snapshot);
+      if (undoStack.length > MAX_UNDO) undoStack.shift();
+      updateUndoBtn();
+    }
+    saveMarks();
+  }
+
+  // Undo last marking action
+  function undoMark() {
+    if (undoStack.length === 0) return;
+    const snapshot = undoStack.pop();
+    snapshot.forEach(({ idx, prevClasses }) => {
+      const el = document.querySelector(`.s-word[data-idx="${idx}"]`);
+      if (el) el.className = prevClasses;
+    });
+    updateUndoBtn();
+    saveMarks();
+  }
+
+  function updateUndoBtn() {
+    const btn = document.getElementById('btnUndo');
+    if (btn) btn.disabled = undoStack.length === 0;
+  }
+
+  // Apply mark to a single word element
+  function applyMark(wordEl) {
+    if (eraserMode) {
+      wordEl.className = 's-word';
+      return;
+    }
+    // Remove any existing highlight
+    wordEl.classList.remove('hl-yellow', 'hl-blue', 'hl-green', 'hl-rose', 'hl-orange', 'hl-purple');
+    // Apply current color (skip if 'none' — bold/underline only mode)
+    if (activeColor !== 'none') {
+      wordEl.classList.add('hl-' + activeColor);
+    }
+    // Apply bold/underline if active
+    if (activeBold) wordEl.classList.add('mk-bold');
+    if (activeUnderline) wordEl.classList.add('mk-underline');
+  }
+
+  // Apply marks to a range of word indices
+  function applyMarkRange(startIdx, endIdx) {
+    const lo = Math.min(startIdx, endIdx);
+    const hi = Math.max(startIdx, endIdx);
+    const snapshot = [];
+    for (let i = lo; i <= hi; i++) {
+      const el = document.querySelector(`.s-word[data-idx="${i}"]`);
+      if (el) {
+        snapshot.push({ idx: i, prevClasses: el.className });
+        applyMark(el);
+      }
+    }
+    if (snapshot.length > 0) {
+      undoStack.push(snapshot);
+      if (undoStack.length > MAX_UNDO) undoStack.shift();
+      updateUndoBtn();
+    }
+    saveMarks();
+  }
+
+  // Mouse/touch handlers on scripture text
+  function initMarkingEvents() {
+    const container = document.getElementById('scriptureText');
+    if (!container) return;
+
+    function getWordFromEvent(e) {
+      // For touch events, use elementFromPoint since touch targets can be imprecise
+      if (e.touches && e.touches.length > 0) {
+        const touch = e.touches[0];
+        const el = document.elementFromPoint(touch.clientX, touch.clientY);
+        return el ? el.closest('.s-word') : null;
+      }
+      if (e.changedTouches && e.changedTouches.length > 0) {
+        const touch = e.changedTouches[0];
+        const el = document.elementFromPoint(touch.clientX, touch.clientY);
+        return el ? el.closest('.s-word') : null;
+      }
+      return e.target.closest('.s-word');
+    }
+
+    function startMark(e) {
+      const word = getWordFromEvent(e);
+      if (!word) return;
+      e.preventDefault();
+      isDragging = true;
+      dragStartIdx = parseInt(word.dataset.idx);
+      // Capture undo snapshot for single click
+      const prevClasses = word.className;
+      applyMark(word);
+      undoStack.push([{ idx: dragStartIdx, prevClasses: prevClasses }]);
+      if (undoStack.length > MAX_UNDO) undoStack.shift();
+      updateUndoBtn();
+    }
+
+    function moveMark(e) {
+      if (!isDragging) return;
+      e.preventDefault();
+      const word = getWordFromEvent(e);
+      if (!word) return;
+      const idx = parseInt(word.dataset.idx);
+      applyMarkRange(dragStartIdx, idx);
+    }
+
+    function endMark() {
+      if (isDragging) {
+        isDragging = false;
+        dragStartIdx = null;
+        saveMarks();
+      }
+    }
+
+    // Mouse events
+    container.addEventListener('mousedown', startMark);
+    container.addEventListener('mousemove', moveMark);
+    container.addEventListener('mouseup', endMark);
+    container.addEventListener('mouseleave', endMark);
+
+    // Touch events (iOS Safari)
+    container.addEventListener('touchstart', startMark, { passive: false });
+    container.addEventListener('touchmove', moveMark, { passive: false });
+    container.addEventListener('touchend', endMark);
+    container.addEventListener('touchcancel', endMark);
+
+    // Prevent text selection in scripture during marking
+    container.addEventListener('selectstart', (e) => e.preventDefault());
+  }
+
+  // Save marks to localStorage
+  function saveMarks() {
+    const marks = {};
+    document.querySelectorAll('.s-word').forEach(w => {
+      const classes = Array.from(w.classList).filter(c => c !== 's-word');
+      if (classes.length > 0) {
+        marks[w.dataset.idx] = classes;
+      }
+    });
+    localStorage.setItem(MARKS_KEY, JSON.stringify(marks));
+  }
+
+  // Load marks from localStorage
+  function loadMarks() {
+    const raw = localStorage.getItem(MARKS_KEY);
+    if (!raw) return;
+    try {
+      const marks = JSON.parse(raw);
+      Object.entries(marks).forEach(([idx, classes]) => {
+        const el = document.querySelector(`.s-word[data-idx="${idx}"]`);
+        if (el) {
+          classes.forEach(c => el.classList.add(c));
+        }
+      });
+    } catch (e) { /* ignore */ }
+  }
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', (e) => {
+    // Only fire if not in an input/textarea
+    if (e.target.matches('input, textarea')) return;
+    if (e.key === 'b' || e.key === 'B') { toggleMarkStyle('bold'); e.preventDefault(); }
+    if (e.key === 'u' || e.key === 'U') { toggleMarkStyle('underline'); e.preventDefault(); }
+    if (e.key === 'e' || e.key === 'E') { toggleEraser(); e.preventDefault(); }
+    if (e.key === '1') setMarkColor('yellow');
+    if (e.key === '2') setMarkColor('blue');
+    if (e.key === '3') setMarkColor('green');
+    if (e.key === '4') setMarkColor('rose');
+    if (e.key === '5') setMarkColor('orange');
+    if (e.key === '6') setMarkColor('purple');
+    if (e.key === '0') setMarkColor('none');
+    if ((e.ctrlKey || e.metaKey) && e.key === 'z') { undoMark(); e.preventDefault(); }
+  });
+
+  // ====== BIBLE REFERENCE POPUP SYSTEM ======
+  // ESV verse text database for popup previews
+  const verseDB = {
+    'acts-4-36': {
+      title: 'Acts 4:36 (ESV)',
+      text: '<span class="popup-verse-num">36</span> Thus Joseph, who was also called by the apostles Barnabas (which means son of encouragement), a Levite, a native of Cyprus…'
+    },
+    '2cor-1-3-4': {
+      title: '2 Corinthians 1:3–4 (ESV)',
+      text: '<span class="popup-verse-num">3</span> Blessed be the God and Father of our Lord Jesus Christ, the Father of mercies and God of all comfort, <span class="popup-verse-num">4</span> who comforts us in all our affliction, so that we may be able to comfort those who are in any affliction, with the comfort with which we ourselves are comforted by God.'
+    },
+    '1cor-1-9': {
+      title: '1 Corinthians 1:9 (ESV)',
+      text: '<span class="popup-verse-num">9</span> God is faithful, by whom you were called into the fellowship of his Son, Jesus Christ our Lord.'
+    },
+    '2cor-13-14': {
+      title: '2 Corinthians 13:14 (ESV)',
+      text: '<span class="popup-verse-num">14</span> The grace of the Lord Jesus Christ and the love of God and the fellowship of the Holy Spirit be with you all.'
+    },
+    'phil-3-15': {
+      title: 'Philippians 3:15 (ESV)',
+      text: '<span class="popup-verse-num">15</span> Let those of us who are mature think this way, and if in anything you think otherwise, God will reveal that also to you.'
+    },
+    'phil-4-2': {
+      title: 'Philippians 4:2 (ESV)',
+      text: '<span class="popup-verse-num">2</span> I entreat Euodia and I entreat Syntyche to agree in the Lord.'
+    },
+    'phil-1-5': {
+      title: 'Philippians 1:5 (ESV)',
+      text: '<span class="popup-verse-num">5</span> …because of your partnership in the gospel from the first day until now.'
+    },
+    'phil-1-17': {
+      title: 'Philippians 1:17 (ESV)',
+      text: '<span class="popup-verse-num">17</span> The former proclaim Christ out of selfish ambition, not sincerely but thinking to afflict me in my imprisonment.'
+    },
+    'gen-3-5-6': {
+      title: 'Genesis 3:5–6 (ESV)',
+      text: '<span class="popup-verse-num">5</span> For God knows that when you eat of it your eyes will be opened, and you will be like God, knowing good and evil. <span class="popup-verse-num">6</span> So when the woman saw that the tree was good for food, and that it was a delight to the eyes, and that the tree was to be desired to make one wise, she took of its fruit and ate, and she also gave some to her husband who was with her, and he ate.'
+    },
+    'isa-53-12': {
+      title: 'Isaiah 53:12 (ESV)',
+      text: '<span class="popup-verse-num">12</span> Therefore I will divide him a portion with the many, and he shall divide the spoil with the strong, because he poured out his soul to death and was numbered with the transgressors; yet he bore the sin of many, and makes intercession for the transgressors.'
+    },
+    'heb-5-8': {
+      title: 'Hebrews 5:8 (ESV)',
+      text: '<span class="popup-verse-num">8</span> Although he was a son, he learned obedience through what he suffered.'
+    },
+    'mark-16-12': {
+      title: 'Mark 16:12 (ESV)',
+      text: '<span class="popup-verse-num">12</span> After these things he appeared in another form to two of them, as they were walking into the country.'
+    },
+    'acts-2-33': {
+      title: 'Acts 2:33 (ESV)',
+      text: '<span class="popup-verse-num">33</span> Being therefore exalted at the right hand of God, and having received from the Father the promise of the Holy Spirit, he has poured out this that you yourselves are seeing and hearing.'
+    },
+    'isa-45-22-23': {
+      title: 'Isaiah 45:22–23 (ESV)',
+      text: '<span class="popup-verse-num">22</span> Turn to me and be saved, all the ends of the earth! For I am God, and there is no other. <span class="popup-verse-num">23</span> By myself I have sworn; from my mouth has gone out in righteousness a word that shall not return: “To me every knee shall bow, every tongue shall swear allegiance.”'
+    },
+    'rom-10-9': {
+      title: 'Romans 10:9 (ESV)',
+      text: '<span class="popup-verse-num">9</span> …because, if you confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved.'
+    },
+    'john-17-1': {
+      title: 'John 17:1 (ESV)',
+      text: '<span class="popup-verse-num">1</span> When Jesus had spoken these words, he lifted up his eyes to heaven, and said, “Father, the hour has come; glorify your Son that the Son may glorify you…”'
+    },
+    'john-17-5': {
+      title: 'John 17:5 (ESV)',
+      text: '<span class="popup-verse-num">5</span> And now, Father, glorify me in your own presence with the glory that I had with you before the world existed.'
+    },
+    'john-2-19-21': {
+      title: 'John 2:19–21 (ESV)',
+      text: '<span class="popup-verse-num">19</span> Jesus answered them, “Destroy this temple, and in three days I will raise it up.” <span class="popup-verse-num">20</span> The Jews then said, “It has taken forty-six years to build this temple, and will you raise it up in three days?” <span class="popup-verse-num">21</span> But he was speaking about the temple of his body.'
+    },
+    'deut-12-11': {
+      title: 'Deuteronomy 12:11 (ESV)',
+      text: '<span class="popup-verse-num">11</span> …then to the place that the LORD your God will choose, to make his name dwell there…'
+    }
+  };
+
+  // Create popup element
+  const popup = document.createElement('div');
+  popup.className = 'ref-popup';
+  popup.id = 'refPopup';
+  popup.innerHTML = `
+    <div class="ref-popup-header">
+      <span class="ref-popup-title" id="popupTitle"></span>
+      <button class="ref-popup-close" onclick="closePopup()" title="Close">\u2715</button>
+    </div>
+    <div class="ref-popup-text" id="popupText"></div>
+    <a class="ref-popup-link" id="popupLink" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      Open on BibleHub
+    </a>
+  `;
+  document.body.appendChild(popup);
+
+  let popupTimeout;
+
+  function showPopup(el) {
+    const refId = el.dataset.ref;
+    const url = el.dataset.url;
+    const display = el.dataset.display;
+    const verse = verseDB[refId];
+
+    if (!verse) {
+      // No verse text available — just open BibleHub directly
+      window.open(url, '_blank');
+      return;
+    }
+
+    document.getElementById('popupTitle').textContent = verse.title;
+    document.getElementById('popupText').innerHTML = verse.text;
+    document.getElementById('popupLink').href = url;
+
+    // Position popup near the clicked element
+    const rect = el.getBoundingClientRect();
+    const popupEl = document.getElementById('refPopup');
+
+    // Show first to measure
+    popupEl.style.visibility = 'hidden';
+    popupEl.classList.add('visible');
+
+    const popupRect = popupEl.getBoundingClientRect();
+    let top = rect.bottom + 8;
+    let left = rect.left;
+
+    // Keep within viewport
+    if (top + popupRect.height > window.innerHeight - 20) {
+      top = rect.top - popupRect.height - 8;
+    }
+    if (left + popupRect.width > window.innerWidth - 16) {
+      left = window.innerWidth - popupRect.width - 16;
+    }
+    if (left < 16) left = 16;
+
+    popupEl.style.top = top + 'px';
+    popupEl.style.left = left + 'px';
+    popupEl.style.visibility = 'visible';
+  }
+
+  function closePopup() {
+    document.getElementById('refPopup').classList.remove('visible');
+  }
+
+  // Click/tap handler for bible refs — works on both desktop and iOS
+  function handleRefTap(e) {
+    const ref = e.target.closest('.bible-ref');
+    if (ref) {
+      e.preventDefault();
+      e.stopPropagation();
+      closePopup();
+      requestAnimationFrame(() => showPopup(ref));
+      return;
+    }
+
+    // Close popup if tapping outside
+    const popupEl = document.getElementById('refPopup');
+    if (popupEl && popupEl.classList.contains('visible') && !popupEl.contains(e.target)) {
+      closePopup();
+    }
+  }
+
+  document.addEventListener('click', handleRefTap);
+  // iOS Safari: also listen for touchend on bible-refs since click can be unreliable on spans
+  document.addEventListener('touchend', (e) => {
+    const ref = e.target.closest('.bible-ref');
+    if (ref) {
+      e.preventDefault();
+      closePopup();
+      requestAnimationFrame(() => showPopup(ref));
+    }
+  }, { passive: false });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closePopup();
+  });
+
+  // Init marking system — handle case where DOM is already loaded
+  function initMarking() {
+    const container = document.getElementById('scriptureText');
+    if (!container) return;
+    wrapScriptureWords();
+    initMarkingEvents();
+    loadMarks();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMarking);
+  } else {
+    initMarking();
+  }
+
+</script>
+
+
+</body>
+</html>
