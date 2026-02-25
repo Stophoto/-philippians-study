@@ -1481,16 +1481,19 @@
     .leader-note { break-inside: avoid; }
     .discussion, .notice { break-inside: avoid; }
 
-    /* Answers: display as bordered blocks with their content */
+    /* Answers: display as bordered blocks — JS sets inline height to fit content */
     .question-input, .reflection-input, .notes-area textarea {
       border: 1px solid #d0d0d0 !important;
       background: #fafafa !important;
-      min-height: 2em !important;
       padding: 0.4em 0.6em !important;
       font-size: 10pt !important;
       color: #1a1a1f !important;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
+      overflow: visible !important;
+      min-height: 0 !important;
+      max-height: none !important;
+      resize: none !important;
     }
 
     /* Sand bands */
@@ -2279,9 +2282,9 @@
 <!-- ====== SAVE BANNER ====== -->
 <div class="save-banner">
   <span class="save-status" id="saveStatus">Saved ✓</span>
-  <button class="save-btn save-btn-secondary" onclick="window.print()" title="Print or save as PDF">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 6,2 18,2 18,9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-    PDF
+  <button class="save-btn save-btn-secondary" onclick="savePDF()" title="Save as PDF — expands all answers, then opens Save/Print dialog">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17,8 12,3 7,8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+    Save PDF
   </button>
   <button class="save-btn save-btn-secondary" onclick="exportWork()" title="Download your work as a file you can reimport later">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17,8 12,3 7,8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
@@ -2327,6 +2330,15 @@
 
   // ====== AUTO-SAVE TO LOCAL STORAGE ======
   const STORAGE_KEY = 'philippians-week1-leader';
+  const STORAGE_VERSION_KEY = STORAGE_KEY + '-version';
+  const CURRENT_VERSION = '2';  // bump this to clear saved data on deploy
+
+  // Clear old saved data when version changes (ensures clean start on new deploys)
+  if (localStorage.getItem(STORAGE_VERSION_KEY) !== CURRENT_VERSION) {
+    localStorage.removeItem(STORAGE_KEY);
+    localStorage.removeItem('philippians-week1-marks');
+    localStorage.setItem(STORAGE_VERSION_KEY, CURRENT_VERSION);
+  }
 
   function getAllInputs() {
     return document.querySelectorAll('input[type="text"], textarea');
@@ -2403,10 +2415,7 @@
           getAllInputs().forEach((el, i) => {
             if (data.answers['field_' + i]) {
               el.value = data.answers['field_' + i];
-              if (el.tagName === 'TEXTAREA') {
-                el.style.height = 'auto';
-                el.style.height = el.scrollHeight + 'px';
-              }
+              autoResizeTextarea(el);
             }
           });
           localStorage.setItem(STORAGE_KEY, JSON.stringify(data.answers));
@@ -2442,9 +2451,19 @@
       getAllInputs().forEach((el, i) => {
         if (data['field_' + i]) {
           el.value = data['field_' + i];
+          autoResizeTextarea(el);
         }
       });
     } catch (e) { /* ignore parse errors */ }
+  }
+
+  // Save as PDF: expand all textareas, then trigger browser Save/Print dialog
+  function savePDF() {
+    document.querySelectorAll('textarea').forEach(autoResizeTextarea);
+    // Delay lets layout reflow before print dialog opens
+    // In Chrome/Edge: change Destination to "Save as PDF"
+    // In Safari: use the PDF dropdown in the bottom-left
+    setTimeout(() => { window.print(); }, 150);
   }
 
   // Auto-save on input (debounced)
@@ -2456,11 +2475,21 @@
     }
   });
 
-  // Auto-resize textareas
+  // Auto-resize textareas — fires on typing, paste, and programmatic changes
+  function autoResizeTextarea(el) {
+    if (el.tagName !== 'TEXTAREA') return;
+    el.style.height = '0';  // collapse fully first to get true scrollHeight
+    el.style.height = Math.max(el.scrollHeight, 36) + 'px';
+  }
+
   document.addEventListener('input', (e) => {
+    if (e.target.tagName === 'TEXTAREA') autoResizeTextarea(e.target);
+  });
+
+  // Catch paste events (some browsers don't fire input reliably on paste)
+  document.addEventListener('paste', (e) => {
     if (e.target.tagName === 'TEXTAREA') {
-      e.target.style.height = 'auto';
-      e.target.style.height = e.target.scrollHeight + 'px';
+      setTimeout(() => autoResizeTextarea(e.target), 0);
     }
   });
 
