@@ -6,7 +6,7 @@
 <title>Philippians 2:1–11 — The Mind of Christ (Participant)</title>
 <meta name="description" content="Participant Handout: An interactive verse-by-verse Bible study through Philippians 2:1–11 with Greek word studies, guided discussion, and interactive features.">
 <meta property="og:title" content="The Mind of Christ — Philippians 2:1–11 (Participant Handout)">
-<meta property="og:description" content="Week 3 Participant Handout for a verse-by-verse Bible study through Philippians. Observe · Interpret · Apply.">
+<meta property="og:description" content="Week 3 Leader Guide for a verse-by-verse Bible study through Philippians. Observe · Interpret · Apply.">
 <meta property="og:type" content="website">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -744,7 +744,8 @@
     border: 1px solid var(--paper-deep);
     border-radius: var(--radius-md);
     padding: 1rem 1.25rem;
-    resize: vertical;
+    resize: none;
+    overflow: hidden;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
     outline: none;
   }
@@ -811,7 +812,8 @@
     width: calc(100% - 2rem);
     outline: none;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    resize: vertical;
+    resize: none;
+    overflow: hidden;
   }
 
   .question-input:focus {
@@ -969,7 +971,8 @@
     border: 1px solid var(--paper-deep);
     border-radius: var(--radius-md);
     padding: 1rem 1.25rem;
-    resize: vertical;
+    resize: none;
+    overflow: hidden;
     outline: none;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
@@ -1481,7 +1484,7 @@
     .leader-note { break-inside: avoid; }
     .discussion, .notice { break-inside: avoid; }
 
-    /* Answers: display as bordered blocks with their content */
+    /* Answers: display as bordered blocks with their content — keep JS-set heights */
     .question-input, .reflection-input, .notes-area textarea {
       border: 1px solid #d0d0d0 !important;
       background: #fafafa !important;
@@ -1489,6 +1492,8 @@
       padding: 0.4em 0.6em !important;
       font-size: 10pt !important;
       color: #1a1a1f !important;
+      overflow: visible !important;
+      resize: none !important;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
@@ -1549,7 +1554,7 @@
 <!-- ====== STICKY NAV ====== -->
 <nav class="nav-bar" id="navBar">
   <div class="nav-inner">
-    <a class="nav-item" href="index.html" title="Back to Home">&#8592; Home</a>
+    <a class="nav-item" href="index.html" title="Back to Home">← Home</a>
     <a class="nav-item" href="#scene">Scene</a>
     <a class="nav-item" href="#read">Read</a>
     <a class="nav-item" href="#observe">Observe</a>
@@ -1563,21 +1568,23 @@
 <!-- ====== MAIN CONTENT ====== -->
 <main class="study-container">
 
-  <!-- ====== SETTING THE SCENE ====== -->
+<!-- ====== SETTING THE SCENE ====== -->
   <section class="section" id="scene">
     <div class="section-header">
       <div class="section-label">Setting the Scene</div>
-      <h2 class="section-title">A City Built on Climbing</h2>
+      <h2 class="section-title">Before the Command, a Portrait</h2>
     </div>
 
     <div class="prose">
-      <p>Philippi was a city obsessed with status. As a Roman colony, it functioned like a miniature Rome — complete with Latin as the official language, Roman law, and a social hierarchy that rewarded ambition. Veterans, merchants, and civic leaders competed for honor, titles, and public recognition. Climbing mattered. Your rank determined where you sat, who greeted you, and how you were buried.</p>
+      <p>Paul has spent the first chapter establishing two things: his chains haven’t stopped the gospel, and Christ is worth everything — living or dying. Now he turns from his own situation to the community’s life together. How should people who belong to Christ actually treat each other?</p>
 
-      <p>Into this culture, Paul writes from prison. He’s been talking about a joy that chains can’t touch (chapter 1) and a life defined by Christ rather than circumstance. Now he turns to the life of the community itself — how they treat one another, what shapes their posture toward each other, and what pattern holds it all together.</p>
+      <p>His answer is surprising. He doesn’t open with instructions. He opens with a picture. Verses 1–4 name the relational realities they already share — encouragement, love, Spirit-life, tender compassion — and call them to live from those realities rather than from ambition or self-interest. But that’s just the frame. The center of the passage is the Christ Hymn (vv. 5–11): the most concentrated description of who Jesus is and what He did in the entire New Testament.</p>
 
-      <p>The Philippians already know the pressure to climb. What they’re about to hear will challenge everything their city trained them to value.</p>
+      <p>Here’s what matters for today: Paul shows before he tells. He puts the portrait of Christ in front of their eyes before he asks them to do anything with it. The doing comes next week. This week is about seeing.</p>
+
+      <p>One more thing. Philippi was a Roman colony — a city where status determined everything. Who you knew, where you sat, how you were buried. Voluntary humility was social suicide. Against that backdrop, Paul is about to describe a God who went down on purpose.</p>
     </div>
-  </section>
+</section>
 
   <div class="section-divider"></div>
 
@@ -1606,18 +1613,18 @@
           <button class="mark-style-btn" id="btnBold" title="Bold (B)" onclick="toggleMarkStyle('bold')"><strong>B</strong></button>
           <button class="mark-style-btn" id="btnUnderline" title="Underline (U)" onclick="toggleMarkStyle('underline')"><u>U</u></button>
           <div class="mark-divider"></div>
-          <button class="mark-eraser-btn" id="btnEraser" title="Eraser" onclick="toggleEraser()">&#x2715; Eraser</button>
-          <button class="mark-undo-btn" id="btnUndo" title="Undo last action" onclick="undoMark()" disabled>&#x21A9; Undo</button>
+          <button class="mark-eraser-btn" id="btnEraser" title="Eraser" onclick="toggleEraser()">✕ Eraser</button>
+          <button class="mark-undo-btn" id="btnUndo" title="Undo last action" onclick="undoMark()" disabled>↩ Undo</button>
           <button class="mark-clear-btn" title="Clear all marks" onclick="clearAllMarks()">Clear All</button>
         </div>
         <div class="mark-legend">
           <span class="mark-legend-label">Key Words</span>
-          <button class="legend-chip legend-yellow" onclick="setMarkColor('yellow')">Mind / mindset</button>
-          <button class="legend-chip legend-blue" onclick="setMarkColor('blue')">Form</button>
-          <button class="legend-chip legend-green" onclick="setMarkColor('green')">Himself / he (Christ)</button>
-          <button class="legend-chip legend-rose" onclick="setMarkColor('rose')">Every / all / any</button>
-          <button class="legend-chip legend-orange" onclick="setMarkColor('orange')">Humility / humble</button>
-          <button class="legend-chip legend-purple" onclick="setMarkColor('purple')">God / God the Father</button>
+          <button class="legend-chip legend-yellow" onclick="setMarkColor('yellow', true)">Mind / mindset</button>
+          <button class="legend-chip legend-blue" onclick="setMarkColor('blue', true)">Form</button>
+          <button class="legend-chip legend-green" onclick="setMarkColor('green', true)">Himself / he (Christ)</button>
+          <button class="legend-chip legend-rose" onclick="setMarkColor('rose', true)">Every / all / any</button>
+          <button class="legend-chip legend-orange" onclick="setMarkColor('orange', true)">Humility / humble</button>
+          <button class="legend-chip legend-purple" onclick="setMarkColor('purple', true)">God / the Father</button>
         </div>
       </div>
 
@@ -1640,11 +1647,12 @@
 
       <div class="mark-hint">Click a word to mark it · Drag to highlight a phrase · <kbd>B</kbd> bold · <kbd>U</kbd> underline · <kbd>Ctrl+Z</kbd> undo</div>
     </div>
+
     <div class="notes-area">
       <label for="readNotes">Notes</label>
-      <textarea id="readNotes" placeholder="What did you notice? What surprised you?"></textarea>
+      <textarea id="readNotes" placeholder="What did you notice? What stands out? What feels like the center of gravity?"></textarea>
     </div>
-  </section>
+</section>
 
   <div class="section-divider"></div>
 
@@ -1655,37 +1663,54 @@
       <h2 class="section-title">What Does the Passage Actually Say?</h2>
       <div class="section-subtitle">Before we interpret, we observe. These exercises put you directly in the text with a pen in hand. Work through them carefully — this is where discovery happens.</div>
     </div>
-    <!-- Task 1: The Foundation -->
+<!-- Task 1 -->
     <h3 class="subsection-title">1. The Foundation: What Has Been Given? (vv. 1–4)</h3>
     <div class="prose">
-      <p>Read verse 1 carefully. Paul lists four realities that believers have already experienced in Christ. Write them out.</p>
+      <p>Read verse 1 carefully. Paul lists four realities that believers have already experienced in Christ. Write them out:</p>
     </div>
 
     <div class="sand-band">
       <div class="question-item">
         <div class="question-label">
           <span class="question-letter">a.</span>
-          <span class="question-text">List the four realities Paul names in verse 1:</span>
+          <span class="question-text">First reality:</span>
         </div>
-        <textarea class="question-input short" placeholder="1."></textarea>
-        <textarea class="question-input short" placeholder="2."></textarea>
-        <textarea class="question-input short" placeholder="3."></textarea>
-        <textarea class="question-input short" placeholder="4."></textarea>
+        <textarea class="question-input short" placeholder=""></textarea>
       </div>
-
       <div class="question-item">
         <div class="question-label">
           <span class="question-letter">b.</span>
+          <span class="question-text">Second reality:</span>
+        </div>
+        <textarea class="question-input short" placeholder=""></textarea>
+      </div>
+      <div class="question-item">
+        <div class="question-label">
+          <span class="question-letter">c.</span>
+          <span class="question-text">Third reality:</span>
+        </div>
+        <textarea class="question-input short" placeholder=""></textarea>
+      </div>
+      <div class="question-item">
+        <div class="question-label">
+          <span class="question-letter">d.</span>
+          <span class="question-text">Fourth reality:</span>
+        </div>
+        <textarea class="question-input short" placeholder=""></textarea>
+      </div>
+      <div class="question-item">
+        <div class="question-label">
+          <span class="question-letter">e.</span>
           <span class="question-text">Now look at verses 2–4. Based on what’s been given (v. 1), what does Paul ask them to do? What two things does he tell them to avoid (v. 3), and what does he put in their place?</span>
         </div>
-        <textarea class="question-input long" placeholder="What does Paul command, prohibit, and replace?"></textarea>
+        <textarea class="question-input long" placeholder=""></textarea>
       </div>
     </div>
 
     <div class="notice">
-      <p>Paul doesn’t start with a command. He starts with what they’ve already received. The command grows out of the gift.</p>
+      <p>Notice the flow: Paul doesn’t start with a command. He starts with what they’ve already received. The command grows out of the gift.</p>
     </div>
-    <!-- Task 2: Trace the Descent -->
+<!-- Task 2 -->
     <h3 class="subsection-title">2. Trace the Descent (vv. 5–8)</h3>
     <div class="prose">
       <p>Mark every action Christ takes in verses 6–8. List them in order as a sequence — a series of steps. Who is the subject of each action? What direction is the movement — up or down?</p>
@@ -1695,68 +1720,57 @@
       <div class="question-item">
         <div class="question-label">
           <span class="question-letter">a.</span>
-          <span class="question-text">List every action Christ takes in verses 6–8, in order:</span>
+          <span class="question-text">List Christ’s actions in sequence (vv. 6–8). What direction is the movement?</span>
         </div>
-        <textarea class="question-input long" placeholder="List the actions in sequence…"></textarea>
+        <textarea class="question-input long" placeholder=""></textarea>
       </div>
-
       <div class="question-item">
         <div class="question-label">
           <span class="question-letter">b.</span>
           <span class="question-text">Now look at the word “form” (blue). Where does it appear? What is Christ in the form of in verse 6? What does He take the form of in verse 7?</span>
         </div>
-        <textarea class="question-input medium" placeholder="Compare the two uses of ‘form’…"></textarea>
+        <textarea class="question-input medium" placeholder=""></textarea>
+      </div>
+      <div class="question-item">
+        <div class="question-label">
+          <span class="question-letter">c.</span>
+          <span class="question-text">If the same word is used for both — what might that tell you about the relationship between who Christ is and what He chose to become?</span>
+        </div>
+        <textarea class="question-input medium" placeholder=""></textarea>
       </div>
     </div>
-
-    <div class="notice">
-      <p>If the same word is used for both — what might that tell you about the relationship between who Christ is and what He chose to become?</p>
-    </div>
-    <!-- Task 3: Map the Reversal -->
+<!-- Task 3 -->
     <h3 class="subsection-title">3. Map the Reversal (vv. 9–11)</h3>
-    <div class="prose">
-      <p>Read verses 9–11 carefully. Who is acting now? (Compare this to who was acting in vv. 6–8.)</p>
-    </div>
-
     <div class="sand-band">
       <div class="question-item">
         <div class="question-label">
           <span class="question-letter">a.</span>
-          <span class="question-text">List what God does in response to Christ’s descent. What does He give? What is the result?</span>
+          <span class="question-text">Read verses 9–11 carefully. Who is acting now? (Compare this to who was acting in vv. 6–8.) List what God does in response to Christ’s descent. What does He give? What is the result?</span>
         </div>
-        <textarea class="question-input medium" placeholder="What does God do in vv. 9–11?"></textarea>
+        <textarea class="question-input long" placeholder=""></textarea>
       </div>
-
       <div class="question-item">
         <div class="question-label">
           <span class="question-letter">b.</span>
           <span class="question-text">Look at how the passage opened (vv. 1–2) — the words “any” and “every” appear there. Now look at verses 10–11. What words reappear? What connection do you see between the opening appeal and the closing declaration?</span>
         </div>
-        <textarea class="question-input medium" placeholder="What connection do you see?"></textarea>
+        <textarea class="question-input long" placeholder=""></textarea>
       </div>
     </div>
-    <!-- IF TIME ALLOWS -->
-    <h3 class="subsection-title" style="margin-top: 2.5rem; color: var(--muted);">If Time Allows</h3>
+<!-- If Time Allows -->
+    <h3 class="subsection-title">If Time Allows</h3>
+    <div class="instruction">This task deepens the observation but is not required. If time is short, move to Interpret — the insight will surface there.</div>
 
-    <div class="prose">
-      <p><em style="color: var(--muted);">This task deepens the observation but is not required. If time is short, move to Interpret — the insight will surface there.</em></p>
-    </div>
-
-    <h3 class="subsection-title">4. The Hinge (v. 5)</h3>
     <div class="sand-band">
       <div class="question-item">
         <div class="question-label">
-          <span class="question-letter">a.</span>
-          <span class="question-text">Look at verse 5 again. What connects Paul’s instructions in verses 1–4 to the Christ Hymn in verses 6–11? Is Paul asking them to adopt a set of behaviors, or a mindset? How does this change how you read vv. 6–11 — as theology about Christ or as a pattern for life?</span>
+          <span class="question-letter">4.</span>
+          <span class="question-text">The Mechanism in Verse 8: Paul says Christ “humbled himself <em>by becoming</em> obedient.” Notice the word “by” — it tells you how the humbling happened. The humbling and the obeying aren’t two separate actions. One is the method of the other. What does that suggest about what humility actually looks like — not as a feeling, but as a lived practice?</span>
         </div>
-        <textarea class="question-input long" placeholder="What role does verse 5 play?"></textarea>
+        <textarea class="question-input long" placeholder=""></textarea>
       </div>
     </div>
-
-    <div class="notice">
-      <p>What you’ve been practicing — marking key words, tracing patterns, listing actions in sequence, comparing the beginning and end of a passage — these are tools that work in any passage. You’re learning how to study the Bible, not just Philippians.</p>
-    </div>
-  </section>
+</section>
 
   <div class="section-divider"></div>
 
@@ -1765,11 +1779,10 @@
     <div class="section-header">
       <div class="section-label">Interpret</div>
       <h2 class="section-title">What Does This Mean?</h2>
-      <div class="section-subtitle">Now that you’ve observed what the text says, it’s time to ask what it means. The Greek insights below confirm and deepen what you’ve already noticed. Greek terms include a reference number (like G3444) — these link directly to the word’s full entry on BibleHub, where you can explore the original language behind the English. They’re breadcrumbs for further study, not required reading.</div>
+      <div class="section-subtitle">The Greek insights below confirm and deepen what you’ve already noticed. Greek terms include a reference number (like G3444) — breadcrumbs for further study on Blue Letter Bible, not required reading.</div>
     </div>
-    <!-- Interpret 1: The Fourfold Appeal -->
+<!-- Interpret Movement 1: vv. 1-4 -->
     <h3 class="subsection-title">1. The Fourfold Appeal: Why Humility Is Possible (vv. 1–4)</h3>
-
     <div class="prose">
       <p>You listed four realities in verse 1. Paul grounds everything that follows in what believers have already received — encouragement that comes from being in Christ, comfort that flows from His love, shared life through the Spirit, and visceral tenderness that moves to action. These are experienced realities, not abstract ideals. Paul’s logic is precise: because you have received this, live this way.</p>
     </div>
@@ -1777,17 +1790,20 @@
     <div class="discussion">
       <p>If humility is grounded in what we’ve received from Christ — what happens to humility when someone tries to produce it from willpower alone?</p>
     </div>
-    <div class="prose">
-      <p>The two impulses Paul opposes in verse 3 are sharp. <strong>Selfish ambition</strong> <a class="inline-strongs-link" href="https://biblehub.com/greek/2052.htm" target="_blank" rel="noopener" title="View G2052 on BibleHub">(G2052)</a> originally carried political overtones — jockeying for position, canvassing for influence. It’s the drive to advance yourself even in good work. <strong>Conceit</strong> <a class="inline-strongs-link" href="https://biblehub.com/greek/2754.htm" target="_blank" rel="noopener" title="View G2754 on BibleHub">(G2754)</a> literally means “empty glory” — seeking validation where there is no substance. It’s the need to be noticed or admired in order to feel whole. Paul calls it empty because only God’s glory satisfies; everything else is a shadow.</p>
+<div class="prose">
+      <p>The two impulses Paul opposes in verse 3 are sharp. <strong>Selfish ambition</strong> <a class="inline-strongs-link" href="https://biblehub.com/greek/2052.htm" target="_blank" rel="noopener">(G2052)</a> originally carried political overtones — jockeying for position, canvassing for influence. It’s the drive to advance yourself even in good work. <strong>Conceit</strong> <a class="inline-strongs-link" href="https://biblehub.com/greek/2754.htm" target="_blank" rel="noopener">(G2754)</a> literally means “empty glory” — seeking validation where there is no substance. Paul calls it empty because only God’s glory satisfies; everything else is a shadow.</p>
+    </div>
 
-      <p>Against these, Paul sets humility — counting others as <strong>more significant</strong> <a class="inline-strongs-link" href="https://biblehub.com/greek/5242.htm" target="_blank" rel="noopener" title="View G5242 on BibleHub">(G5242)</a>. This is a deliberate posture, not self-loathing. It means your worth is already secured in Christ, so another person’s flourishing is a joy rather than a threat.</p>
-
+    <div class="discussion">
+      <p>Paul used this same word — <strong>selfish ambition</strong> <a class="inline-strongs-link" href="https://biblehub.com/greek/2052.htm" target="_blank" rel="noopener">(G2052)</a> — back in <span class="bible-ref" data-ref="phil-1-17" data-url="https://biblehub.com/esv/philippians/1.htm" data-display="Philippians 1:17">Philippians 1:17</span> for those preaching Christ from impure motives while he was in prison. What does it tell you that this impulse can infect even gospel work?</p>
+    </div>
+<div class="prose">
+      <p>Against these, Paul sets humility — counting others as <strong>more significant</strong> <a class="inline-strongs-link" href="https://biblehub.com/greek/5242.htm" target="_blank" rel="noopener">(G5242)</a>. This is a deliberate posture, not self-loathing. It means your worth is already secured in Christ, so another person’s flourishing is a joy rather than a threat.</p>
       <p><em>Paul has named the foundation and the posture. Now verse 5 turns the corner — from the community’s disposition to the person who defines it.</em></p>
     </div>
 
-    <!-- Interpret 2: The Descent -->
+    <!-- Interpret Movement 2: vv. 5-8 -->
     <h3 class="subsection-title">2. The Descent: Christ as the Pattern (vv. 5–8)</h3>
-
     <div class="prose">
       <p>You traced Christ’s actions and saw the downward sequence. You noticed that “form” appears twice — once for God, once for a servant.</p>
     </div>
@@ -1795,39 +1811,41 @@
     <div class="discussion">
       <p>What does it mean that the same word describes both? If Christ’s “form of God” tells us something about His nature — what does His “form of a servant” tell us?</p>
     </div>
-    <div class="word-study">
-      <div class="word-study-term">form <a class="strongs-link" href="https://biblehub.com/greek/3444.htm" target="_blank" rel="noopener" title="View G3444 on BibleHub">(G3444)</a></div>
+<div class="word-study">
+      <div class="word-study-term">mind <a class="strongs-link" href="https://biblehub.com/greek/5426.htm" target="_blank" rel="noopener">(G5426)</a></div>
       <div class="word-study-def">
-        <p>The outward expression that corresponds to and reveals inner reality — essential nature made visible. Paul uses it twice: “form of God” (v. 6) and “form of a servant” (v. 7). The same word for both. Christ’s servanthood is just as real and just as revealing of His character as His divine glory. The servant form does not conceal who God is. It displays who God is.</p>
-      </div>
-    </div>
-
-    <div class="word-study">
-      <div class="word-study-term">mind <a class="strongs-link" href="https://biblehub.com/greek/5426.htm" target="_blank" rel="noopener" title="View G5426 on BibleHub">(G5426)</a></div>
-      <div class="word-study-def">
-        <p>More than thinking — a settled disposition, an orientation that governs how you see and respond to the world. Paul uses this word ten times in Philippians. It’s a thread through the entire letter. When he says “have this mind,” he’s pointing to Christ’s entire orientation — downward, others-focused, self-giving — and saying: this disposition is yours to live from.</p>
+        <p>The word in verse 5 — the same word Paul used in verse 2 — means more than thinking. It describes a settled disposition, an orientation that governs how you see and respond to the world. Paul uses this word ten times in Philippians. It’s a thread through the entire letter. When he says “have this mind,” he’s pointing to Christ’s entire orientation — downward, others-focused, self-giving — and saying: this disposition is yours to live from.</p>
       </div>
     </div>
 
     <div class="prose">
-      <p>Christ did not count equality with God “a thing to be <strong>grasped</strong>” <a class="inline-strongs-link" href="https://biblehub.com/greek/725.htm" target="_blank" rel="noopener" title="View G725 on BibleHub">(G725)</a> — something to exploit or leverage. The contrast with Adam is striking: in Eden, Adam reached for godlikeness; Christ, already being God, released His grip. The downward movement begins from strength choosing surrender — divine authority wielded with restraint.</p>
+      <p>Christ did not count equality with God “a thing to be <strong>grasped</strong>” <a class="inline-strongs-link" href="https://biblehub.com/greek/725.htm" target="_blank" rel="noopener">(G725)</a> — something to exploit or leverage. The contrast with Adam is striking: in Eden, Adam reached for godlikeness; Christ, already being God, released His grip. The downward movement begins from strength choosing surrender — divine authority wielded with restraint.</p>
 
-      <p>He <strong>emptied himself</strong> <a class="inline-strongs-link" href="https://biblehub.com/greek/2758.htm" target="_blank" rel="noopener" title="View G2758 on BibleHub">(G2758)</a> — a word that means to pour out or make of no account. This is not subtraction of deity but addition of servanthood. He didn’t become less God. He took on more — the full weight of human limitation, dependence, and suffering. Each step descends further: form of a servant, born in human likeness, found in human form, humbled himself, became obedient to death — even death on a cross. That final phrase is a shudder. Crucifixion was Rome’s punishment for the lowest — slaves, rebels, enemies of the state. For Christ to end there was the most complete inversion of status imaginable.</p>
+      <p>He <strong>emptied himself</strong> <a class="inline-strongs-link" href="https://biblehub.com/greek/2758.htm" target="_blank" rel="noopener">(G2758)</a> — a word that means to pour out or make of no account. This is not subtraction of deity but addition of servanthood. He didn’t become less God. He took on more — the full weight of human limitation, dependence, and suffering. Each step descends further: form of a servant, born in human likeness, found in human form, humbled himself, became obedient to death — even death on a cross. That final phrase is a shudder. Crucifixion was Rome’s punishment for the lowest — slaves, rebels, enemies of the state. For Christ to end there was the most complete inversion of status imaginable.</p>
+
+      <p>Now look at the mechanism in verse 8. Paul doesn’t say Christ humbled himself <em>and then</em> became obedient — as though humility and obedience were two separate acts. He says Christ humbled himself <em>by becoming</em> obedient. The word “by” is doing real work. The humbling was accomplished <em>through</em> the obeying. They’re one movement seen from two angles: the humbling is what it looks like from the outside; the obeying — placing yourself under God’s voice rather than your own — is what it looks like from the inside.</p>
+
+      <p>The word <strong>obedient</strong> <a class="inline-strongs-link" href="https://biblehub.com/greek/5255.htm" target="_blank" rel="noopener">(G5255)</a> is built from two roots: “under” and “to hear.” Literally, one who hears from beneath — positioning yourself under what God speaks so that it lands on you with full weight. Christ’s obedience wasn’t compliance. It was the voluntary surrender of self-governance — trusting the Father’s purpose even when that purpose led to a cross.</p>
+
+      <p>This matters because next week Paul will use the same root word when he turns to the Philippians: “as you have always <em>obeyed</em>.” The pattern Christ established is about to become the pattern they’re called to live.</p>
     </div>
-    <!-- Interpret 3: The Vindication -->
+<!-- Interpret Movement 3: vv. 9-11 -->
     <h3 class="subsection-title">3. The Vindication: God’s Response (vv. 9–11)</h3>
-
     <div class="prose">
-      <p>You mapped the reversal and saw the shift: in verses 6–8, Christ acts — choosing descent. In verses 9–11, God acts.</p>
+      <p>You mapped the reversal — the shift from Christ acting to God acting. In vv. 6–8, every verb belongs to Christ: He did not count, He emptied, He humbled, He became obedient. In vv. 9–11, the Father takes over. Christ descended; God responded.</p>
     </div>
 
     <div class="discussion">
-      <p>The passage moves from Christ choosing to go down (vv. 6–8) to God lifting Him up (vv. 9–11). What does that pattern suggest about how God’s kingdom works — and how it differs from the way the world works?</p>
+      <p>Christ didn’t exalt Himself — God did. What does it mean that the person who descended is not the one who decides the outcome?</p>
     </div>
-    <div class="prose">
-      <p>The original language sharpens the pattern you just described. The word <strong>therefore</strong> <a class="inline-strongs-link" href="https://biblehub.com/greek/1352.htm" target="_blank" rel="noopener" title="View G1352 on BibleHub">(G1352)</a> in verse 9 is the hinge. Because Christ descended to the uttermost depths, God elevated Him to the uttermost heights. This is vindication — public recognition of who He always was.</p>
+<div class="prose">
+      <p>The word <strong>therefore</strong> <a class="inline-strongs-link" href="https://biblehub.com/greek/1352.htm" target="_blank" rel="noopener">(G1352)</a> in verse 9 means “for this very reason” — connecting Christ’s descent directly to God’s response. Because He went to the lowest place, God lifted Him to the highest.</p>
 
-      <p>The <strong>name above every name</strong> is almost certainly “Lord” — the Greek word that translates YHWH, the covenant name of Israel’s God. Paul is making an extraordinary claim: Jesus shares the identity of Israel’s God. And he anchors it in the Old Testament. Verses 10–11 echo <span class="bible-ref" data-ref="isa-45-22-23" data-url="https://biblehub.com/esv/isaiah/45.htm" data-display="Isaiah 45:22–23">Isaiah 45:22–23</span>, where YHWH declares that every knee will bow to Him alone. Paul takes that declaration and applies it to Jesus — the crucified servant is the Lord of all creation.</p>
+      <p><strong>Highly exalted</strong> <a class="inline-strongs-link" href="https://biblehub.com/greek/5251.htm" target="_blank" rel="noopener">(G5251)</a> is a word used only here in the entire New Testament. The prefix intensifies: not merely exalted, but super-exalted. This is not promotion — Christ did not earn a new status. It is revelation — God making visible to all creation what was true from eternity.</p>
+
+      <p>The <strong>name above every name</strong> is almost certainly “Lord” — the Greek word that translates YHWH, the covenant name of Israel’s God. Paul is making an extraordinary claim: Jesus shares the identity of Israel’s God. Verses 10–11 echo <span class="bible-ref" data-ref="isa-45-22-23" data-url="https://biblehub.com/esv/isaiah/45.htm" data-display="Isaiah 45:23">Isaiah 45:23</span>, where YHWH declares that every knee will bow to Him alone. Paul takes that declaration and applies it to Jesus — the crucified servant is the Lord of all creation.</p>
+
+      <p><em>The Week 3 Appendix covers additional Greek terms for this passage — including the fourfold appeal terms and the exaltation terms — along with cross-references for further study. Use it alongside your daily reading this week (see Action Steps below).</em></p>
     </div>
   </section>
 
@@ -1838,38 +1856,43 @@
     <div class="section-header">
       <div class="section-label">Apply</div>
       <h2 class="section-title">How Does This Truth Confront or Shape Me?</h2>
-      <div class="section-subtitle">This is where the passage moves from the page to the heart. The goal isn’t to generate guilt or manufacture emotion. It’s to create space for the Holy Spirit to press truth into the places where you actually live.</div>
+      <div class="section-subtitle">Notice: Paul hasn’t given you a to-do list yet. The instructions come in chapter 2:12 — next week. This week, he gave you a portrait. The most important response to a portrait isn’t to do something. It’s to look at it until it changes what you want.</div>
     </div>
-    <h3 class="subsection-title">Quiet Reflection</h3>
-    <div class="instruction">Read through the passage one more time on your own. Then sit with these questions:</div>
+<div class="instruction">Read through the passage one more time on your own — slowly. Then sit with these questions:</div>
 
     <div class="reflection-item">
       <div class="reflection-number">1</div>
-      <div class="reflection-question">Where are you grasping — for status, recognition, control, or comfort — instead of releasing? Be specific. Name the situation, the relationship, or the role where your grip is tightest.</div>
-      <textarea class="reflection-input" placeholder="Be specific…"></textarea>
+      <div class="reflection-question">You’ve just traced a God who went down on purpose — from divine equality to a cross. What in you responds to that? What does it stir? Don’t rush to application. Just name what you’re seeing and what it’s doing to you.</div>
+      <textarea class="reflection-input" placeholder="Take your time with this…"></textarea>
     </div>
 
     <div class="reflection-item">
       <div class="reflection-number">2</div>
       <div class="reflection-question">Paul grounds the call to humility in what you’ve already received from Christ (v. 1). When you serve others, does your service flow from the security of being loved — or from the need to be noticed? What’s the difference between those two in your own life?</div>
-      <textarea class="reflection-input" placeholder="What drives your service?"></textarea>
+      <textarea class="reflection-input" placeholder="Take your time with this…"></textarea>
     </div>
 
     <div class="reflection-item">
       <div class="reflection-number">3</div>
-      <div class="reflection-question">The passage says Christ’s descent led to His exaltation. But He didn’t descend <em>in order to</em> be exalted — He descended out of love and obedience. Where are you willing to go low only if the payoff is guaranteed?</div>
-      <textarea class="reflection-input" placeholder="Where do you demand a guarantee?"></textarea>
+      <div class="reflection-question">Where are you grasping — for status, recognition, control, or comfort — instead of releasing? Be specific. Name the situation, the relationship, or the role where your grip is tightest.</div>
+      <textarea class="reflection-input" placeholder="Take your time with this…"></textarea>
     </div>
-    <!-- Prayer -->
+
+    <div class="reflection-item">
+      <div class="reflection-number">4</div>
+      <div class="reflection-question">Christ didn’t descend in order to be exalted — He descended out of love and trust. Where in your life are you willing to go low only if the payoff is guaranteed?</div>
+      <textarea class="reflection-input" placeholder="Take your time with this…"></textarea>
+    </div>
+<!-- Prayer -->
     <h3 class="subsection-title">Prayer</h3>
     <div class="instruction">Close with prayer shaped by the passage:</div>
 
     <div class="prayer-block">
       <div class="prayer-text">
-        Father, we stand in the shadow of a mystery — that the God of all creation chose to descend. That glory expressed itself in servanthood. That the cross, not the throne, is where Your heart was most fully revealed. Forgive us for grasping when You have already given us everything we need. Forgive us for climbing when You have called us downward. Teach us the mind of Christ — to count others as more significant, to release our grip on status and comfort, and to trust that You vindicate what the world overlooks. Fill us so completely with Your encouragement, Your love, Your Spirit, and Your tender compassion that humility becomes our freedom — not our burden. At the name of Jesus, every knee will bow. Until that day, let us be people who bow first. Amen.
+        Father, we stand in the shadow of a mystery — that the God of all creation chose to descend. That glory expressed itself in servanthood. That the cross, not the throne, is where Your heart was most fully revealed. We haven’t fully seen it yet. We’ve traced the words, but the reality is bigger than our minds can hold. Keep showing us. Keep putting this portrait in front of us until it changes what we want — until the downward path looks more beautiful than the climb, until letting go feels less like loss and more like freedom. Forgive us for grasping when You have already given us everything we need. Teach us the mind of Christ. At the name of Jesus, every knee will bow. Until that day, let us be people who bow first. Amen.
       </div>
     </div>
-  </section>
+</section>
 
   <div class="section-divider"></div>
 
@@ -1878,28 +1901,32 @@
     <div class="section-header">
       <div class="section-label">Action Steps</div>
       <h2 class="section-title">For the Week</h2>
-      <div class="section-subtitle">These are not busywork. They’re designed to keep you in the passage between sessions — so the text has time to work on you.</div>
+      <div class="section-subtitle">These are not busywork. They’re designed to keep you in the passage between sessions — so the text has time to work on you. This week, you’re sitting with a portrait. Not studying it for information — letting it form you.</div>
+    </div>
+
+    <div class="prose" style="margin-bottom: 1.5rem;">
+      <p><em>Your Week 3 Appendix — the Amplified Paraphrase and Key Greek Insights — is your companion for the daily exercises below. Use it alongside your Bible during your reading and word study days.</em></p>
     </div>
 
     <div class="action-step">
-      <span class="action-day">Days 1–2</span>
+      <div class="action-day">Days 1–2</div>
       <div class="action-content">
-        <h4>Read and Mark</h4>
-        <p>Read Philippians 2:1–11 once each day. On Day 1, mark every action Christ takes. On Day 2, mark every action God the Father takes. What pattern emerges between the two?</p>
-        <p><em style="color: var(--muted); font-size: 0.92rem;">If you only do one thing this week, this is it. Re-reading with a pen in hand is the most important habit this study builds.</em></p>
+        <h4>Read and Behold</h4>
+        <p>Read Philippians 2:1–11 once each day — slowly, out loud if you can. On Day 1, mark every action Christ takes. On Day 2, mark every action God the Father takes. Then read the Amplified Paraphrase alongside the passage. Let the expanded language slow you down. If a phrase stops you, stay there.</p>
+        <p><em>If you only do one thing this week, this is it. You’re not reviewing information. You’re giving the portrait time to do its work.</em></p>
       </div>
     </div>
 
     <div class="action-step">
-      <span class="action-day">Days 3–4</span>
+      <div class="action-day">Days 3–4</div>
       <div class="action-content">
         <h4>Go Deeper</h4>
-        <p>Focus on one of these words: “form,” “emptied,” “humbled,” or “name.” Spend 10 minutes with it — look it up on Blue Letter Bible. <em>(Go to blueletterbible.org, type “Philippians 2” in the search bar, click the verse number, then select “Interlinear” to see the Greek words behind the English. Try clicking the Strong’s number for the word you’re studying.)</em> Where else does Paul use this word? What does it reveal?</p>
+        <p>Pick one term from the Key Greek Insights section of your Appendix — “form,” “emptied,” “obedient,” or “name” are good starting points. Read the entry, follow the cross-references, and spend 10 minutes with it on Blue Letter Bible. Where else does Paul use this word? What does it reveal?</p>
       </div>
     </div>
 
     <div class="action-step">
-      <span class="action-day">Day 5</span>
+      <div class="action-day">Day 5</div>
       <div class="action-content">
         <h4>Pray the Text</h4>
         <p>Use verses 9–11 as your prayer — but pray it personally: “At the name of Jesus, let every knee in my life bow — every ambition, every fear, every grasping impulse — and let my tongue confess that Jesus Christ is Lord.” Write down what the Spirit surfaces.</p>
@@ -1907,14 +1934,14 @@
     </div>
 
     <div class="action-step">
-      <span class="action-day">Days 6–7</span>
+      <div class="action-day">Days 6–7</div>
       <div class="action-content">
         <h4>Read Ahead</h4>
-        <p>Read Philippians 2:12–18 twice. Don’t study it yet — just read. Notice what connects to what you learned this week. Come to next session with one observation and one question.</p>
+        <p>Read Philippians 2:12–30 twice. Don’t study it yet — just read. Notice the very first word: “Therefore.” What is it there <em>for</em>? What is it connecting back to? Come to next session with one observation and one question.</p>
       </div>
     </div>
 
-  </section>
+</section>
 
   <div class="section-divider"></div>
 
@@ -1924,51 +1951,56 @@
       <span class="appendix-divider-label">Appendix</span>
     </div>
 
-    <div class="instruction" style="margin-top: 0.5rem;">
-      <strong style="color: var(--ink-soft); font-style: normal;">How to Use This Appendix:</strong> These materials are designed for the days between sessions. The Amplified Paraphrase works best alongside your daily re-reading (Days 1–2). The Greek Insights go deeper than the session — use them alongside your word study (Days 3–4). Don’t read this before the group meets; it answers questions you haven’t asked yet.
+    <div class="section-header">
+      <div class="section-label">Week 3 Appendix</div>
+      <h2 class="section-title">Philippians 2:1–11</h2>
+      <div class="section-subtitle">Companion materials for your daily reading this week</div>
     </div>
 
     <!-- Amplified Paraphrase -->
-    <h3 class="subsection-title" style="margin-top: 2rem;">Take-Home Reading: Amplified Paraphrase</h3>
-    <div class="instruction">An expanded rendering of Philippians 2:1–11. Not a replacement for the text — a companion that opens up what’s already there. Read it alongside your ESV.</div>
+    <h3 class="subsection-title">Amplified Paraphrase</h3>
+    <div class="instruction">An expanded rendering of Philippians 2:1–11. Not a replacement for the text — a companion that opens up what’s already there. Read it alongside your ESV during Days 1–2.</div>
+    <div class="prose" style="margin-bottom: 0.75rem;">
+      <p><strong>How to use this:</strong> Read the ESV text first. Then read the amplified version below. The words in <em>italics</em> are expansions — they slow the language down so the original meaning is easier to see. Don’t rush. If a phrase stops you, stay with it.</p>
+    </div>
 
     <div class="paraphrase-block">
       <div class="paraphrase-text">
-        <p><span class="verse-num">1</span> So if there is any encouragement in Christ <span class="amplified">— any steadying, strengthening word that comes from belonging to Him —</span> any comfort from love <span class="amplified">— the relief and settledness of being held by a love you did not earn —</span> any participation in the Spirit <span class="amplified">— any shared life in the Holy Spirit who binds you to God and to each other —</span> any affection and sympathy <span class="amplified">— any of the gut-level tenderness and mercy that moves you toward another person’s pain —</span></p>
+        <p><span class="verse-num">1</span> So if there is any encouragement in Christ — <span class="amplified">any steadying, strengthening word that comes from belonging to Him</span> — any comfort from love — <span class="amplified">the relief and settledness of being held by a love you did not earn</span> — any participation in the Spirit — <span class="amplified">any shared life in the Holy Spirit who binds you to God and to each other</span> — any affection and sympathy — <span class="amplified">any of the gut-level tenderness and mercy that moves you toward another person’s pain</span> —</p>
 
-        <p><span class="verse-num">2</span> complete my joy by being of the same mind <span class="amplified">— oriented the same direction, seeing through the same lens, shaped by the same Christ —</span> having the same love, being in full accord <span class="amplified">— joined at the deepest level, not merely cooperating but pulled by the same gravity —</span> and of one mind.</p>
+        <p><span class="verse-num">2</span> complete my joy by being of the same mind — <span class="amplified">oriented the same direction, seeing through the same lens, shaped by the same Christ</span> — having the same love, being in full accord — <span class="amplified">joined at the deepest level, not merely cooperating but pulled by the same gravity</span> — and of one mind.</p>
 
-        <p><span class="verse-num">3</span> Do nothing from selfish ambition <span class="amplified">— the drive to advance yourself, to jockey for position, to build your reputation even through good work —</span> or conceit <span class="amplified">— empty glory, the craving to be noticed and admired that feeds on shadows and never satisfies —</span> but in humility count others more significant than yourselves <span class="amplified">— the settled freedom of someone who has nothing left to prove, free to lift others because they are already held.</span></p>
+        <p><span class="verse-num">3</span> Do nothing from selfish ambition — <span class="amplified">the drive to advance yourself, to jockey for position, to build your reputation even through good work</span> — or conceit — <span class="amplified">empty glory, the craving to be noticed and admired that feeds on shadows and never satisfies</span> — but in humility count others more significant than yourselves — <span class="amplified">the settled freedom of someone who has nothing left to prove, free to lift others because they are already held.</span></p>
 
-        <p><span class="verse-num">4</span> Let each of you look not only to his own interests, but also to the interests of others. <span class="amplified">A quiet, devastating instruction. Not “ignore your own needs” — but stop making them the center. Learn to see what someone else carries.</span></p>
+        <p><span class="verse-num">4</span> Let each of you look not only to his own interests, but also to the interests of others — <span class="amplified">not ignoring your own needs, but refusing to make them the center; learning to see what someone else carries.</span></p>
 
-        <p><span class="verse-num">5</span> Have this mind among yourselves <span class="amplified">— adopt this very disposition, this orientation of heart —</span> which is yours in Christ Jesus <span class="amplified">— already given to you in Him, already the shape of the life you’ve entered. What follows is that mind made visible.</span></p>
+        <p><span class="verse-num">5</span> Have this mind among yourselves — <span class="amplified">adopt this very disposition, this orientation of heart</span> — which is yours in Christ Jesus — <span class="amplified">already given to you in Him, already the shape of the life you’ve entered.</span></p>
 
-        <p><span class="verse-num">6</span> Who, though he was in the form of God <span class="amplified">— existing in the full, undiminished expression of divine nature; not resembling God, but sharing His very essence, radiating it —</span> did not count equality with God a thing to be grasped <span class="amplified">— did not treat His divine status as a possession to exploit, a privilege to leverage, a throne to cling to. Where Adam reached for godlikeness, Christ — already being God — opened His hands.</span></p>
+        <p><span class="verse-num">6</span> Who, though he was in the form of God — <span class="amplified">existing in the full, undiminished expression of divine nature; not resembling God, but sharing His very essence</span> — did not count equality with God a thing to be grasped — <span class="amplified">did not treat His divine status as a possession to exploit, a privilege to leverage, a throne to cling to.</span></p>
 
-        <p><span class="verse-num">7</span> But emptied himself <span class="amplified">— poured Himself out; not by subtracting deity, but by adding servanthood —</span> by taking the form of a servant <span class="amplified">— the same word used for His divine form now used for His servant form; His servanthood is just as real and revealing of His essence as His glory —</span> being born in the likeness of men. <span class="amplified">He entered. He came all the way in.</span></p>
+        <p><span class="verse-num">7</span> But emptied himself — <span class="amplified">poured Himself out; not by subtracting deity, but by adding servanthood</span> — by taking the form of a servant — <span class="amplified">the same word used for His divine form now used for His servant form; His servanthood is just as real and revealing of His essence as His glory</span> — being born in the likeness of men.</p>
 
-        <p><span class="verse-num">8</span> And being found in human form <span class="amplified">— recognized as fully human, living among us in the vulnerability and limitation we know —</span> he humbled himself by becoming obedient to the point of death <span class="amplified">— each step a further descent, each one freely chosen —</span> even death on a cross. <span class="amplified">The lowest death. The most shameful execution Rome could devise — reserved for slaves, rebels, and enemies of the state. He went there. He chose it. The downward path reached its floor.</span></p>
+        <p><span class="verse-num">8</span> And being found in human form — <span class="amplified">recognized as fully human, living among us in the vulnerability and limitation we know</span> — he humbled himself by becoming obedient — <span class="amplified">the humbling and the obeying are one movement: the voluntary placement of Himself under the Father’s voice</span> — to the point of death — <span class="amplified">each step a further descent, each one freely chosen</span> — even death on a cross — <span class="amplified">the lowest death, reserved for slaves, rebels, and enemies of the state. He went there. He chose it.</span></p>
 
-        <p><span class="verse-num">9</span> Therefore <span class="amplified">— because of this, in direct response to the descent —</span> God has highly exalted him <span class="amplified">— lifted Him to the highest place, beyond all created authority —</span> and bestowed on him the name that is above every name <span class="amplified">— the name that belongs to God alone, the name that Israel’s God declared no one else would carry.</span></p>
+        <p><span class="verse-num">9</span> Therefore — <span class="amplified">because of this, in direct response to the descent</span> — God has highly exalted him — <span class="amplified">lifted Him to the highest place, beyond all created authority</span> — and bestowed on him the name that is above every name — <span class="amplified">the name that belongs to God alone, the name that Israel’s God declared no one else would carry.</span></p>
 
-        <p><span class="verse-num">10</span> so that at the name of Jesus every knee should bow <span class="amplified">— in heaven, among the angels and powers; on earth, among every living person; and under the earth, among the dead and the spiritual realm — every created being acknowledging what is true —</span></p>
+        <p><span class="verse-num">10</span> so that at the name of Jesus every knee should bow — <span class="amplified">in submission, in worship, in recognition that the one who descended is the Lord of all</span> — in heaven and on earth and under the earth —</p>
 
-        <p><span class="verse-num">11</span> and every tongue confess that Jesus Christ is Lord <span class="amplified">— the word that translates YHWH, the covenant name of Israel’s God —</span> to the glory of God the Father. <span class="amplified">The crucified servant is the Lord of all creation. And this confession does not diminish the Father’s glory — it completes it. The Son’s descent and exaltation reveal the very heart of God.</span></p>
+        <p><span class="verse-num">11</span> and every tongue confess that Jesus Christ is Lord — <span class="amplified">the name that translates YHWH, the God of Israel — the carpenter, the servant, the crucified one shares the identity of the eternal God</span> — to the glory of God the Father — <span class="amplified">and this confession, far from competing with the Father’s glory, is the fullest expression of it.</span></p>
       </div>
     </div>
 
-    <!-- Key Greek Insights -->
-    <h3 class="subsection-title" style="margin-top: 2.5rem;">Key Greek Insights</h3>
-    <div class="instruction">Selected terms for this passage. These go deeper than the session material. Each entry includes cross-references and a prompt for personal study. Use them alongside Blue Letter Bible during Days 3–4.</div>
+    <!-- Greek Insight Cards -->
+    <h3 class="subsection-title">Key Greek Insights</h3>
+    <div class="instruction">These go deeper than the session material. Each entry includes cross-references and a prompt for personal study. Use them alongside Blue Letter Bible during Days 3–4.</div>
 
-    <!-- Group 1: The Fourfold Appeal -->
+    <!-- Group: The Fourfold Appeal (v. 1) -->
     <div class="greek-group-title">The Fourfold Appeal (v. 1)</div>
 
     <div class="greek-card">
-      <div class="greek-card-term">encouragement <a class="strongs-link" href="https://biblehub.com/greek/3874.htm" target="_blank" rel="noopener" title="View G3874 on BibleHub">(G3874)</a></div>
+      <div class="greek-card-term">encouragement <a class="strongs-link" href="https://biblehub.com/greek/3874.htm" target="_blank" rel="noopener">(G3874)</a></div>
       <div class="greek-card-def">
-        <p>A word that means to come alongside — to strengthen, steady, and call someone forward. It can mean comfort or exhortation depending on context. Here it describes what happens to a person who is “in Christ” — they are met, steadied, and given courage to continue. The encouragement is not from Paul. It is in Christ Himself.</p>
+        <p>A word that means to come alongside — to strengthen, steady, and call someone forward. It can mean comfort or exhortation depending on context. Here it describes what happens to a person who is “in Christ” — they are met, steadied, and given courage to continue.</p>
       </div>
       <div class="greek-card-xref">
         <strong>Cross-reference</strong>
@@ -1977,20 +2009,20 @@
     </div>
 
     <div class="greek-card">
-      <div class="greek-card-term">comfort <a class="strongs-link" href="https://biblehub.com/greek/3890.htm" target="_blank" rel="noopener" title="View G3890 on BibleHub">(G3890)</a></div>
+      <div class="greek-card-term">comfort <a class="strongs-link" href="https://biblehub.com/greek/3890.htm" target="_blank" rel="noopener">(G3890)</a></div>
       <div class="greek-card-def">
-        <p>Consolation that comes close — a nearness of love that brings relief and settledness. This is love experienced as refuge. Paul is saying: if God’s love has ever brought you rest, let that rest reshape how you treat others.</p>
+        <p>Consolation that comes close — a nearness of love that brings relief and settledness. Paul is saying: if God’s love has ever brought you rest, let that rest reshape how you treat others.</p>
       </div>
       <div class="greek-card-xref">
         <strong>Cross-reference</strong>
-        <span class="bible-ref" data-ref="2cor-1-3-4" data-url="https://biblehub.com/esv/2_corinthians/1.htm" data-display="2 Corinthians 1:3–4">2 Corinthians 1:3–4</span>. Paul calls God “the Father of mercies and God of all comfort.” How does this cycle — God comforts you, you comfort others — connect to what Paul is asking of the Philippians in verses 2–4?
+        <span class="bible-ref" data-ref="2cor-1-3-4" data-url="https://biblehub.com/esv/2_corinthians/1.htm" data-display="2 Corinthians 1:3–4">2 Corinthians 1:3–4</span>. Paul calls God “the Father of mercies and God of all comfort.” How does this cycle — God comforts you, you comfort others — connect to what Paul is asking in verses 2–4?
       </div>
     </div>
 
     <div class="greek-card">
-      <div class="greek-card-term">participation <a class="strongs-link" href="https://biblehub.com/greek/2842.htm" target="_blank" rel="noopener" title="View G2842 on BibleHub">(G2842)</a></div>
+      <div class="greek-card-term">participation <a class="strongs-link" href="https://biblehub.com/greek/2842.htm" target="_blank" rel="noopener">(G2842)</a></div>
       <div class="greek-card-def">
-        <p>Shared life, mutual partnership, common ownership. The same word translated “fellowship” and “partnership” elsewhere in Philippians (<span class="bible-ref" data-ref="phil-1-5" data-url="https://biblehub.com/esv/philippians/1.htm" data-display="Philippians 1:5">1:5</span>). Here it describes a shared life with the Holy Spirit — drawn into His presence, participating in His work.</p>
+        <p>Shared life, mutual partnership, common ownership. The same word translated “fellowship” and “partnership” elsewhere in Philippians (<span class="bible-ref" data-ref="phil-1-5" data-url="https://biblehub.com/esv/philippians/1.htm" data-display="1:5">1:5</span>). Here it describes a shared life with the Holy Spirit — drawn into His presence, participating in His work.</p>
       </div>
       <div class="greek-card-xref">
         <strong>Cross-reference</strong>
@@ -1999,30 +2031,30 @@
     </div>
 
     <div class="greek-card">
-      <div class="greek-card-term">affection and sympathy <a class="strongs-link" href="https://biblehub.com/greek/4698.htm" target="_blank" rel="noopener" title="View G4698 on BibleHub">(G4698)</a> + <a class="strongs-link" href="https://biblehub.com/greek/3628.htm" target="_blank" rel="noopener" title="View G3628 on BibleHub">(G3628)</a></div>
+      <div class="greek-card-term">affection and sympathy <a class="strongs-link" href="https://biblehub.com/greek/4698.htm" target="_blank" rel="noopener">(G4698 + G3628)</a></div>
       <div class="greek-card-def">
-        <p>Visceral tenderness and compassion that moves to action. The first word refers to the inward organs — gut-level emotion, the deep place where care is felt physically. The second word means mercy that responds. Together they describe the emotional texture of a community shaped by Christ — tender, responsive, moved by one another’s pain.</p>
+        <p>Visceral tenderness and compassion that moves to action. The first word refers to the inward organs — gut-level emotion, the deep place where care is felt physically. The second word means mercy that responds. Together they describe the emotional texture of a community shaped by Christ.</p>
       </div>
     </div>
 
-    <!-- Group 2: The Call to Humility -->
+    <!-- Group: The Call to Humility (vv. 2-4) -->
     <div class="greek-group-title">The Call to Humility (vv. 2–4)</div>
 
     <div class="greek-card">
-      <div class="greek-card-term">mind / mindset <a class="strongs-link" href="https://biblehub.com/greek/5426.htm" target="_blank" rel="noopener" title="View G5426 on BibleHub">(G5426)</a></div>
+      <div class="greek-card-term">mind / mindset <a class="strongs-link" href="https://biblehub.com/greek/5426.htm" target="_blank" rel="noopener">(G5426)</a></div>
       <div class="greek-card-def">
-        <p>To set one’s orientation, to adopt a governing disposition. Paul uses this word ten times in Philippians. It’s the thread that runs through the whole letter. In 2:2 he uses it twice: “be of the same mind… of one mind.” In 2:5 he says “have this mind among yourselves.” This is not about thinking the same thoughts. It is about sharing the same orientation — a way of seeing shaped by Christ’s own posture.</p>
+        <p>To set one’s orientation, to adopt a governing disposition. Paul uses this word ten times in Philippians. In 2:2 he uses it twice. In 2:5 he says “have this mind among yourselves.” This is not about thinking the same thoughts. It is about sharing the same orientation — a way of seeing shaped by Christ’s own posture.</p>
       </div>
       <div class="greek-card-xref">
         <strong>Cross-reference</strong>
-        <span class="bible-ref" data-ref="phil-3-15" data-url="https://biblehub.com/esv/philippians/3.htm" data-display="Philippians 3:15">Philippians 3:15</span> and <span class="bible-ref" data-ref="phil-4-2" data-url="https://biblehub.com/esv/philippians/4.htm" data-display="Philippians 4:2">4:2</span>. Paul uses this same word for mature thinking and for reconciliation between Euodia and Syntyche. What does it tell you that this one word connects humility, maturity, and peacemaking?
+        <span class="bible-ref" data-ref="phil-3-15" data-url="https://biblehub.com/esv/philippians/3.htm" data-display="Philippians 3:15">Philippians 3:15</span> and <span class="bible-ref" data-ref="phil-4-2" data-url="https://biblehub.com/esv/philippians/4.htm" data-display="Philippians 4:2">Philippians 4:2</span>. Paul uses this same word for mature thinking and for reconciliation between Euodia and Syntyche. What does it tell you that one word connects humility, maturity, and peacemaking?
       </div>
     </div>
 
     <div class="greek-card">
-      <div class="greek-card-term">selfish ambition <a class="strongs-link" href="https://biblehub.com/greek/2052.htm" target="_blank" rel="noopener" title="View G2052 on BibleHub">(G2052)</a></div>
+      <div class="greek-card-term">selfish ambition <a class="strongs-link" href="https://biblehub.com/greek/2052.htm" target="_blank" rel="noopener">(G2052)</a></div>
       <div class="greek-card-def">
-        <p>Originally a political word — the self-seeking of a person canvassing for office, jockeying for position, advancing their own cause. Paul places it as the opposite of Christ-mindedness.</p>
+        <p>Originally a political word — the self-seeking of a person canvassing for office.</p>
       </div>
       <div class="greek-card-xref">
         <strong>Cross-reference</strong>
@@ -2031,26 +2063,19 @@
     </div>
 
     <div class="greek-card">
-      <div class="greek-card-term">conceit <a class="strongs-link" href="https://biblehub.com/greek/2754.htm" target="_blank" rel="noopener" title="View G2754 on BibleHub">(G2754)</a></div>
+      <div class="greek-card-term">more significant <a class="strongs-link" href="https://biblehub.com/greek/5242.htm" target="_blank" rel="noopener">(G5242)</a></div>
       <div class="greek-card-def">
-        <p>Literally, “empty glory” — the craving for recognition that feeds on what has no substance. Paul calls it empty because only God’s glory satisfies. Everything else is a shadow that vanishes when the light arrives.</p>
+        <p>To surpass, to hold in higher regard. The posture of counting others as more significant is not self-deprecation — it’s the freedom of someone whose identity is already established.</p>
       </div>
     </div>
 
-    <div class="greek-card">
-      <div class="greek-card-term">more significant <a class="strongs-link" href="https://biblehub.com/greek/5242.htm" target="_blank" rel="noopener" title="View G5242 on BibleHub">(G5242)</a></div>
-      <div class="greek-card-def">
-        <p>To surpass, to hold in higher regard. The posture of counting others as more significant is not self-deprecation — it’s the freedom of someone whose identity is already established. When your worth is secured in Christ, another person’s flourishing becomes a joy rather than a threat.</p>
-      </div>
-    </div>
-
-    <!-- Group 3: The Descent of Christ -->
+    <!-- Group: The Descent of Christ (vv. 5-8) -->
     <div class="greek-group-title">The Descent of Christ (vv. 5–8)</div>
 
     <div class="greek-card">
-      <div class="greek-card-term">form <a class="strongs-link" href="https://biblehub.com/greek/3444.htm" target="_blank" rel="noopener" title="View G3444 on BibleHub">(G3444)</a></div>
+      <div class="greek-card-term">form <a class="strongs-link" href="https://biblehub.com/greek/3444.htm" target="_blank" rel="noopener">(G3444)</a></div>
       <div class="greek-card-def">
-        <p>One of the most important words in the passage. It means the outward expression that corresponds to and reveals inner reality — essential nature made visible. Paul uses it twice: “form of God” (v. 6) and “form of a servant” (v. 7). The same word for both. Christ’s servanthood is just as real and just as revealing of His character as His divine glory. The servant form does not conceal who God is. It displays who God is.</p>
+        <p>The outward expression that corresponds to and reveals inner reality — essential nature made visible. Paul uses it twice: “form of God” (v. 6) and “form of a servant” (v. 7). The same word for both. The session explored what this means for Christ’s nature; here, follow the cross-reference for a different angle.</p>
       </div>
       <div class="greek-card-xref">
         <strong>For further study</strong>
@@ -2059,9 +2084,9 @@
     </div>
 
     <div class="greek-card">
-      <div class="greek-card-term">grasped <a class="strongs-link" href="https://biblehub.com/greek/725.htm" target="_blank" rel="noopener" title="View G725 on BibleHub">(G725)</a></div>
+      <div class="greek-card-term">grasped <a class="strongs-link" href="https://biblehub.com/greek/725.htm" target="_blank" rel="noopener">(G725)</a></div>
       <div class="greek-card-def">
-        <p>Something seized, clutched, or exploited — like plunder or a trophy gripped tightly. Christ did not treat His equality with God as a possession to leverage. He held it with open hands. The contrast with Adam is sharp: Adam reached for what was not his; Christ released what was rightfully His.</p>
+        <p>Something seized, clutched, or exploited — like plunder or a trophy gripped tightly. Christ did not treat His equality with God as a possession to leverage. The session named the Adam contrast; here, sit with the Genesis text directly.</p>
       </div>
       <div class="greek-card-xref">
         <strong>Cross-reference</strong>
@@ -2070,9 +2095,9 @@
     </div>
 
     <div class="greek-card">
-      <div class="greek-card-term">emptied <a class="strongs-link" href="https://biblehub.com/greek/2758.htm" target="_blank" rel="noopener" title="View G2758 on BibleHub">(G2758)</a></div>
+      <div class="greek-card-term">emptied <a class="strongs-link" href="https://biblehub.com/greek/2758.htm" target="_blank" rel="noopener">(G2758)</a></div>
       <div class="greek-card-def">
-        <p>To pour out, to make of no account, to render void of advantage. Christ emptied Himself — not by subtracting His divine nature, but by adding the full weight of human limitation and servanthood. He did not become less God. He took on more — dependence, vulnerability, suffering. The pouring out was not loss of identity but overflow of love.</p>
+        <p>To pour out, to make of no account. The session focused on what Christ added (servanthood, limitation, suffering). Here, follow the Isaiah thread — a different window into the same act.</p>
       </div>
       <div class="greek-card-xref">
         <strong>Cross-reference</strong>
@@ -2081,16 +2106,20 @@
     </div>
 
     <div class="greek-card">
-      <div class="greek-card-term">humble <a class="strongs-link" href="https://biblehub.com/greek/5013.htm" target="_blank" rel="noopener" title="View G5013 on BibleHub">(G5013)</a></div>
+      <div class="greek-card-term">humble <a class="strongs-link" href="https://biblehub.com/greek/5013.htm" target="_blank" rel="noopener">(G5013)</a></div>
       <div class="greek-card-def">
-        <p>To bring low, to take a lower position voluntarily. In the Greco-Roman world, humility was weakness — the mark of someone who had no choice. Paul redefines it: Christ’s humbling is an act of strength. He descends deliberately, freely, from a position of supreme authority.</p>
+        <p>To bring low, to take a lower position voluntarily. In the Greco-Roman world, humility was weakness — the mark of someone with no choice. Christ’s humbling redefines it: an act of supreme strength, freely chosen from divine authority.</p>
+      </div>
+      <div class="greek-card-xref">
+        <strong>Cross-reference</strong>
+        <span class="bible-ref" data-ref="matt-23-12" data-url="https://biblehub.com/esv/matthew/23.htm" data-display="Matthew 23:12">Matthew 23:12</span>, <span class="bible-ref" data-ref="luke-14-11" data-url="https://biblehub.com/esv/luke/14.htm" data-display="Luke 14:11">Luke 14:11</span>. “Whoever exalts himself will be humbled, and whoever humbles himself will be exalted.” Jesus made this a kingdom principle. How does the Christ Hymn embody it?
       </div>
     </div>
 
     <div class="greek-card">
-      <div class="greek-card-term">obedient <a class="strongs-link" href="https://biblehub.com/greek/5255.htm" target="_blank" rel="noopener" title="View G5255 on BibleHub">(G5255)</a></div>
+      <div class="greek-card-term">obedient <a class="strongs-link" href="https://biblehub.com/greek/5255.htm" target="_blank" rel="noopener">(G5255)</a></div>
       <div class="greek-card-def">
-        <p>Submissive, responsive to authority — literally, to place oneself under the hearing of another. Christ aligned Himself fully with the Father’s will, even when that will led to crucifixion. This is the deepest expression of trust — trusting that the Father’s purpose is worth the cost.</p>
+        <p>Built from “under” + “to hear.” Literally, one who hears from beneath — positioning yourself under what is spoken so that it lands on you with full weight. Christ aligned Himself fully with the Father’s will, even when that will led to crucifixion. And in 2:12, Paul will use the same root word for the Philippians.</p>
       </div>
       <div class="greek-card-xref">
         <strong>Cross-reference</strong>
@@ -2098,60 +2127,64 @@
       </div>
     </div>
 
-    <!-- Group 4: The Exaltation -->
+    <!-- Group: The Exaltation (vv. 9-11) -->
     <div class="greek-group-title">The Exaltation (vv. 9–11)</div>
 
     <div class="greek-card">
-      <div class="greek-card-term">therefore <a class="strongs-link" href="https://biblehub.com/greek/1352.htm" target="_blank" rel="noopener" title="View G1352 on BibleHub">(G1352)</a></div>
+      <div class="greek-card-term">therefore <a class="strongs-link" href="https://biblehub.com/greek/1352.htm" target="_blank" rel="noopener">(G1352)</a></div>
       <div class="greek-card-def">
-        <p>A small word carrying enormous weight. It means “for this very reason” — connecting Christ’s descent directly to God’s response. Because He went to the lowest place, God lifted Him to the highest. The exaltation is vindication — the Father publicly recognizing who Christ always was and what His descent accomplished.</p>
+        <p>“For this very reason” — connecting Christ’s descent directly to God’s response. Because He went to the lowest place, God lifted Him to the highest. The exaltation is vindication — the Father publicly recognizing who Christ always was.</p>
       </div>
     </div>
 
     <div class="greek-card">
-      <div class="greek-card-term">highly exalted <a class="strongs-link" href="https://biblehub.com/greek/5251.htm" target="_blank" rel="noopener" title="View G5251 on BibleHub">(G5251)</a></div>
+      <div class="greek-card-term">highly exalted <a class="strongs-link" href="https://biblehub.com/greek/5251.htm" target="_blank" rel="noopener">(G5251)</a></div>
       <div class="greek-card-def">
-        <p>A word used only here in the entire New Testament. The prefix intensifies: not merely exalted, but super-exalted, raised to the highest conceivable position. This is not promotion — Christ did not earn a new status. It is revelation — God making visible to all creation what was true from eternity.</p>
+        <p>Used only here in the entire New Testament. Not merely exalted, but super-exalted. This is not promotion. It is revelation — God making visible to all creation what was true from eternity.</p>
       </div>
       <div class="greek-card-xref">
         <strong>Cross-reference</strong>
-        <span class="bible-ref" data-ref="acts-2-33" data-url="https://biblehub.com/esv/acts/2.htm" data-display="Acts 2:33">Acts 2:33</span>. Peter uses “exalted” (without the intensified prefix) for Christ’s position at the Father’s right hand. How does Paul’s intensified form add theological weight?
+        <span class="bible-ref" data-ref="acts-2-33" data-url="https://biblehub.com/esv/acts/2.htm" data-display="Acts 2:33">Acts 2:33</span>, <span class="bible-ref" data-ref="acts-5-31" data-url="https://biblehub.com/esv/acts/5.htm" data-display="Acts 5:31">Acts 5:31</span>. Peter uses “exalted” without the intensified prefix. How does Paul’s intensified form add weight?
       </div>
     </div>
 
     <div class="greek-card">
-      <div class="greek-card-term">name <a class="strongs-link" href="https://biblehub.com/greek/3686.htm" target="_blank" rel="noopener" title="View G3686 on BibleHub">(G3686)</a></div>
+      <div class="greek-card-term">name <a class="strongs-link" href="https://biblehub.com/greek/3686.htm" target="_blank" rel="noopener">(G3686)</a></div>
       <div class="greek-card-def">
-        <p>In Scripture, a name represents the person’s character, authority, and presence. The “name above every name” is almost certainly “Lord” — the Greek translation of YHWH, the covenant name of Israel’s God. God bestowed on Jesus the name that He declared in Isaiah belongs to Him alone. This is the revelation that the crucified Jesus shares the identity of Israel’s God.</p>
+        <p>In Scripture, a name represents character, authority, and presence. The “name above every name” is almost certainly “Lord” — the Greek translation of YHWH. God bestowed on Jesus the name that He declared in Isaiah belongs to Him alone.</p>
       </div>
       <div class="greek-card-xref">
         <strong>For further study</strong>
-        Explore the “name theology” thread in the Old Testament — <span class="bible-ref" data-ref="deut-12-11" data-url="https://biblehub.com/esv/deuteronomy/12.htm" data-display="Deuteronomy 12:11">Deuteronomy 12:11</span> (God’s name dwelling in a place), <span class="bible-ref" data-ref="john-2-19-21" data-url="https://biblehub.com/esv/john/2.htm" data-display="John 2:19–21">John 2:19–21</span>. How does Jesus fulfill what the temple anticipated — as the place where God’s name and presence truly dwell?
+        Explore the “name theology” thread — <span class="bible-ref" data-ref="deut-12-11" data-url="https://biblehub.com/esv/deuteronomy/12.htm" data-display="Deuteronomy 12:11">Deuteronomy 12:11</span> (God’s name dwelling in a place), <span class="bible-ref" data-ref="1kings-8-29" data-url="https://biblehub.com/esv/1_kings/8.htm" data-display="1 Kings 8:29">1 Kings 8:29</span> (Solomon’s temple), <span class="bible-ref" data-ref="num-6-27" data-url="https://biblehub.com/esv/numbers/6.htm" data-display="Numbers 6:27">Numbers 6:27</span> (God’s name placed on Israel). How does Jesus fulfill what the temple anticipated? See <span class="bible-ref" data-ref="john-2-19-21" data-url="https://biblehub.com/esv/john/2.htm" data-display="John 2:19–21">John 2:19–21</span>.
       </div>
     </div>
 
     <div class="greek-card">
-      <div class="greek-card-term">Lord <a class="strongs-link" href="https://biblehub.com/greek/2962.htm" target="_blank" rel="noopener" title="View G2962 on BibleHub">(G2962)</a></div>
+      <div class="greek-card-term">Lord <a class="strongs-link" href="https://biblehub.com/greek/2962.htm" target="_blank" rel="noopener">(G2962)</a></div>
       <div class="greek-card-def">
-        <p>The title that translates the divine name YHWH in the Greek Old Testament. When Paul says “every tongue confess that Jesus Christ is Lord,” he is making the most extraordinary claim in the New Testament: the carpenter from Nazareth, crucified under Pontius Pilate, shares the identity and authority of the God who brought Israel out of Egypt. This confession is the heart of early Christian faith (<span class="bible-ref" data-ref="rom-10-9" data-url="https://biblehub.com/esv/romans/10.htm" data-display="Romans 10:9">Romans 10:9</span>).</p>
+        <p>The title that translates YHWH in the Greek Old Testament. When Paul says “every tongue confess that Jesus Christ is Lord,” he is making the most extraordinary claim in the New Testament: the carpenter from Nazareth shares the identity of the God who brought Israel out of Egypt.</p>
       </div>
     </div>
 
     <div class="greek-card">
-      <div class="greek-card-term">bow <a class="strongs-link" href="https://biblehub.com/greek/2578.htm" target="_blank" rel="noopener" title="View G2578 on BibleHub">(G2578)</a></div>
+      <div class="greek-card-term">bow <a class="strongs-link" href="https://biblehub.com/greek/2578.htm" target="_blank" rel="noopener">(G2578)</a></div>
       <div class="greek-card-def">
-        <p>To bend the knee — a posture of submission, worship, and recognition. Paul draws directly from <span class="bible-ref" data-ref="isa-45-22-23" data-url="https://biblehub.com/esv/isaiah/45.htm" data-display="Isaiah 45:22–23">Isaiah 45:22–23</span>, where YHWH declares that every knee will bow to Him alone. By applying this to Jesus, Paul places Christ within the identity of Israel’s one God. The descent to the cross leads to the worship of all creation.</p>
-      </div>
-    </div>
-
-    <div class="greek-card">
-      <div class="greek-card-term">glory <a class="strongs-link" href="https://biblehub.com/greek/1391.htm" target="_blank" rel="noopener" title="View G1391 on BibleHub">(G1391)</a></div>
-      <div class="greek-card-def">
-        <p>Weight, splendor, the visible radiance of God’s character and presence. The passage ends where it began — with God. Christ’s exaltation as Lord does not compete with the Father’s glory. It reveals it. The Son’s descent and the Father’s response together display the heart of the triune God: divine power expressed through self-giving love, and divine glory completed through the vindication of the servant who went lowest.</p>
+        <p>To bend the knee — submission, worship, recognition. Paul draws from <span class="bible-ref" data-ref="isa-45-22-23" data-url="https://biblehub.com/esv/isaiah/45.htm" data-display="Isaiah 45:22–23">Isaiah 45:22–23</span>, where YHWH declares that every knee will bow to Him alone. By applying this to Jesus, Paul places Christ within the identity of Israel’s one God.</p>
       </div>
       <div class="greek-card-xref">
         <strong>Cross-reference</strong>
-        <span class="bible-ref" data-ref="john-17-1" data-url="https://biblehub.com/esv/john/17.htm" data-display="John 17:1">John 17:1</span>, <span class="bible-ref" data-ref="john-17-5" data-url="https://biblehub.com/esv/john/17.htm" data-display="John 17:5">17:5</span>. Jesus prays to be glorified with the glory He had “before the world existed.” How does this prayer illuminate the movement of Philippians 2:6–11 — from pre-existent glory, through descent, to restored and revealed glory?
+        <span class="bible-ref" data-ref="isa-45-22-23" data-url="https://biblehub.com/esv/isaiah/45.htm" data-display="Isaiah 45:22–23">Isaiah 45:22–23</span> (read the full context). What is YHWH declaring about Himself? What does it mean that Paul takes this declaration and applies it to Jesus?
+      </div>
+    </div>
+
+    <div class="greek-card">
+      <div class="greek-card-term">glory <a class="strongs-link" href="https://biblehub.com/greek/1391.htm" target="_blank" rel="noopener">(G1391)</a></div>
+      <div class="greek-card-def">
+        <p>Weight, splendor, the visible radiance of God’s character. The passage ends where it began — with God. Christ’s exaltation as Lord does not compete with the Father’s glory. It reveals it. The Son’s descent and the Father’s response together display the heart of the triune God: divine power expressed through self-giving love.</p>
+      </div>
+      <div class="greek-card-xref">
+        <strong>Cross-reference</strong>
+        <span class="bible-ref" data-ref="john-17-1-5" data-url="https://biblehub.com/esv/john/17.htm" data-display="John 17:1, 5">John 17:1, 5</span>. Jesus prays to be glorified with the glory He had “before the world existed.” How does this prayer illuminate the movement of Philippians 2:6–11?
       </div>
     </div>
 
@@ -2161,7 +2194,7 @@
   <div class="study-footer">
     <p>Philippians: A Verse-by-Verse Bible Study · Week 3 · Participant Handout<br>
     Observe · Interpret · Apply<br>
-    <a href="index.html" style="color: var(--teal); text-decoration: none; font-weight: 500;">&#8592; Back to Home</a></p>
+    <a href="index.html" style="color: var(--teal); text-decoration: none; font-weight: 500;">← Back to Home</a></p>
   </div>
 
 </main>
@@ -2187,18 +2220,16 @@
   </button>
 </div>
 
-
 <script>
+
   // ====== STICKY NAV SCROLL BEHAVIOR ======
   const navBar = document.getElementById('navBar');
   const navItems = document.querySelectorAll('.nav-item');
   const sections = document.querySelectorAll('section[id]');
 
   window.addEventListener('scroll', () => {
-    // Shadow on scroll
     navBar.classList.toggle('scrolled', window.scrollY > 100);
 
-    // Active section tracking
     let current = '';
     sections.forEach(section => {
       const sectionTop = section.offsetTop - 120;
@@ -2222,7 +2253,6 @@
     return document.querySelectorAll('input[type="text"], textarea');
   }
 
-  // Save
   function saveResponses() {
     const data = {};
     getAllInputs().forEach((el, i) => {
@@ -2233,12 +2263,11 @@
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
 
     const status = document.getElementById('saveStatus');
-    status.textContent = 'Saved ✓';
+    status.textContent = 'Saved \u2713';
     status.classList.add('visible');
     setTimeout(() => status.classList.remove('visible'), 2000);
   }
 
-  // Export all work to a downloadable JSON file
   function exportWork() {
     const answers = {};
     getAllInputs().forEach((el, i) => {
@@ -2279,7 +2308,6 @@
     setTimeout(() => status.classList.remove('visible'), 2500);
   }
 
-  // Import work from a JSON file
   function importWork(event) {
     const file = event.target.files[0];
     if (!file) return;
@@ -2294,8 +2322,7 @@
             if (data.answers['field_' + i]) {
               el.value = data.answers['field_' + i];
               if (el.tagName === 'TEXTAREA') {
-                el.style.height = 'auto';
-                el.style.height = el.scrollHeight + 'px';
+                autoResize(el);
               }
             }
           });
@@ -2323,7 +2350,6 @@
     event.target.value = '';
   }
 
-  // Load
   function loadResponses() {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return;
@@ -2332,6 +2358,9 @@
       getAllInputs().forEach((el, i) => {
         if (data['field_' + i]) {
           el.value = data['field_' + i];
+          if (el.tagName === 'TEXTAREA') {
+            autoResize(el);
+          }
         }
       });
     } catch (e) { /* ignore parse errors */ }
@@ -2346,19 +2375,46 @@
     }
   });
 
-  // Auto-resize textareas
+  // ====== AUTO-RESIZE TEXTAREAS (improved) ======
+  // The trick: set height to 0 first (not 'auto') to get true scrollHeight
+  function autoResize(el) {
+    if (el.tagName !== 'TEXTAREA') return;
+    el.style.height = '0';
+    el.style.height = Math.max(el.scrollHeight, parseInt(getComputedStyle(el).minHeight) || 0) + 'px';
+  }
+
+  // On typing
   document.addEventListener('input', (e) => {
     if (e.target.tagName === 'TEXTAREA') {
-      e.target.style.height = 'auto';
-      e.target.style.height = e.target.scrollHeight + 'px';
+      autoResize(e.target);
     }
   });
 
+  // On paste — needs setTimeout because paste content isn't in the field yet
+  document.addEventListener('paste', (e) => {
+    if (e.target.tagName === 'TEXTAREA') {
+      setTimeout(() => autoResize(e.target), 0);
+    }
+  });
+
+  // On page load: resize all textareas that have content
+  function resizeAllTextareas() {
+    document.querySelectorAll('textarea').forEach(el => {
+      if (el.value.trim()) {
+        autoResize(el);
+      }
+    });
+  }
+
   // Load on page ready
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadResponses);
+    document.addEventListener('DOMContentLoaded', () => {
+      loadResponses();
+      resizeAllTextareas();
+    });
   } else {
     loadResponses();
+    resizeAllTextareas();
   }
 
   // ====== SCRIPTURE MARKING SYSTEM ======
@@ -2369,10 +2425,10 @@
   let eraserMode = false;
   let isDragging = false;
   let dragStartIdx = null;
-  let undoStack = [];  // Stack of {indices: [{idx, prevClasses}]} snapshots
+  let dragSnapshot = [];  // accumulates words touched during a single drag
+  let undoStack = [];
   const MAX_UNDO = 50;
 
-  // Wrap every text node word in the scripture into clickable spans
   function wrapScriptureWords() {
     const container = document.getElementById('scriptureText');
     if (!container) return;
@@ -2383,10 +2439,8 @@
       const newContent = [];
       p.childNodes.forEach(node => {
         if (node.nodeType === 1) {
-          // Element node — keep as-is (verse numbers, etc.)
           newContent.push(node.outerHTML);
         } else if (node.nodeType === 3) {
-          // Text node — wrap each word
           const text = node.textContent;
           const tokens = text.match(/\S+|\s+/g) || [];
           tokens.forEach(token => {
@@ -2403,7 +2457,6 @@
     });
   }
 
-  // Toolbar: set highlight color
   function setMarkColor(color, scrollToScripture) {
     activeColor = color;
     eraserMode = false;
@@ -2412,7 +2465,6 @@
     document.querySelectorAll('.mark-color-btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.color === color);
     });
-    // If called from keyword chips, scroll scripture into view
     if (scrollToScripture) {
       const block = document.getElementById('scriptureBlock');
       if (block) {
@@ -2421,7 +2473,6 @@
     }
   }
 
-  // Toolbar: toggle bold/underline
   function toggleMarkStyle(style) {
     if (style === 'bold') {
       activeBold = !activeBold;
@@ -2432,25 +2483,20 @@
     }
   }
 
-  // Toolbar: toggle eraser
   function toggleEraser() {
     eraserMode = !eraserMode;
     document.getElementById('btnEraser').classList.toggle('active', eraserMode);
     document.getElementById('scriptureText').classList.toggle('eraser-mode', eraserMode);
-    // Deactivate color buttons visually
     if (eraserMode) {
       document.querySelectorAll('.mark-color-btn').forEach(btn => btn.classList.remove('active'));
     } else {
-      // Reactivate current color
       document.querySelectorAll('.mark-color-btn').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.color === activeColor);
       });
     }
   }
 
-  // Clear all marks
   function clearAllMarks() {
-    // Capture full undo snapshot before clearing
     const snapshot = [];
     document.querySelectorAll('.s-word').forEach(w => {
       if (w.className !== 's-word') {
@@ -2466,7 +2512,6 @@
     saveMarks();
   }
 
-  // Undo last marking action
   function undoMark() {
     if (undoStack.length === 0) return;
     const snapshot = undoStack.pop();
@@ -2483,50 +2528,24 @@
     if (btn) btn.disabled = undoStack.length === 0;
   }
 
-  // Apply mark to a single word element
   function applyMark(wordEl) {
     if (eraserMode) {
       wordEl.className = 's-word';
       return;
     }
-    // Remove any existing highlight
     wordEl.classList.remove('hl-yellow', 'hl-blue', 'hl-green', 'hl-rose', 'hl-orange', 'hl-purple');
-    // Apply current color (skip if 'none' — bold/underline only mode)
     if (activeColor !== 'none') {
       wordEl.classList.add('hl-' + activeColor);
     }
-    // Apply bold/underline if active
     if (activeBold) wordEl.classList.add('mk-bold');
     if (activeUnderline) wordEl.classList.add('mk-underline');
   }
 
-  // Apply marks to a range of word indices
-  function applyMarkRange(startIdx, endIdx) {
-    const lo = Math.min(startIdx, endIdx);
-    const hi = Math.max(startIdx, endIdx);
-    const snapshot = [];
-    for (let i = lo; i <= hi; i++) {
-      const el = document.querySelector(`.s-word[data-idx="${i}"]`);
-      if (el) {
-        snapshot.push({ idx: i, prevClasses: el.className });
-        applyMark(el);
-      }
-    }
-    if (snapshot.length > 0) {
-      undoStack.push(snapshot);
-      if (undoStack.length > MAX_UNDO) undoStack.shift();
-      updateUndoBtn();
-    }
-    saveMarks();
-  }
-
-  // Mouse/touch handlers on scripture text
   function initMarkingEvents() {
     const container = document.getElementById('scriptureText');
     if (!container) return;
 
     function getWordFromEvent(e) {
-      // For touch events, use elementFromPoint since touch targets can be imprecise
       if (e.touches && e.touches.length > 0) {
         const touch = e.touches[0];
         const el = document.elementFromPoint(touch.clientX, touch.clientY);
@@ -2546,12 +2565,8 @@
       e.preventDefault();
       isDragging = true;
       dragStartIdx = parseInt(word.dataset.idx);
-      // Capture undo snapshot for single click
-      const prevClasses = word.className;
+      dragSnapshot = [{ idx: dragStartIdx, prevClasses: word.className }];
       applyMark(word);
-      undoStack.push([{ idx: dragStartIdx, prevClasses: prevClasses }]);
-      if (undoStack.length > MAX_UNDO) undoStack.shift();
-      updateUndoBtn();
     }
 
     function moveMark(e) {
@@ -2560,34 +2575,47 @@
       const word = getWordFromEvent(e);
       if (!word) return;
       const idx = parseInt(word.dataset.idx);
-      applyMarkRange(dragStartIdx, idx);
+      const lo = Math.min(dragStartIdx, idx);
+      const hi = Math.max(dragStartIdx, idx);
+      for (let i = lo; i <= hi; i++) {
+        const el = document.querySelector(`.s-word[data-idx="${i}"]`);
+        if (el) {
+          // Only record snapshot once per word per drag
+          if (!dragSnapshot.find(s => s.idx === i)) {
+            dragSnapshot.push({ idx: i, prevClasses: el.className });
+          }
+          applyMark(el);
+        }
+      }
     }
 
     function endMark() {
       if (isDragging) {
         isDragging = false;
+        if (dragSnapshot.length > 0) {
+          undoStack.push(dragSnapshot);
+          if (undoStack.length > MAX_UNDO) undoStack.shift();
+          updateUndoBtn();
+        }
+        dragSnapshot = [];
         dragStartIdx = null;
         saveMarks();
       }
     }
 
-    // Mouse events
     container.addEventListener('mousedown', startMark);
     container.addEventListener('mousemove', moveMark);
     container.addEventListener('mouseup', endMark);
     container.addEventListener('mouseleave', endMark);
 
-    // Touch events (iOS Safari)
     container.addEventListener('touchstart', startMark, { passive: false });
     container.addEventListener('touchmove', moveMark, { passive: false });
     container.addEventListener('touchend', endMark);
     container.addEventListener('touchcancel', endMark);
 
-    // Prevent text selection in scripture during marking
     container.addEventListener('selectstart', (e) => e.preventDefault());
   }
 
-  // Save marks to localStorage
   function saveMarks() {
     const marks = {};
     document.querySelectorAll('.s-word').forEach(w => {
@@ -2599,7 +2627,6 @@
     localStorage.setItem(MARKS_KEY, JSON.stringify(marks));
   }
 
-  // Load marks from localStorage
   function loadMarks() {
     const raw = localStorage.getItem(MARKS_KEY);
     if (!raw) return;
@@ -2616,7 +2643,6 @@
 
   // Keyboard shortcuts
   document.addEventListener('keydown', (e) => {
-    // Only fire if not in an input/textarea
     if (e.target.matches('input, textarea')) return;
     if (e.key === 'b' || e.key === 'B') { toggleMarkStyle('bold'); e.preventDefault(); }
     if (e.key === 'u' || e.key === 'U') { toggleMarkStyle('underline'); e.preventDefault(); }
@@ -2632,84 +2658,95 @@
   });
 
   // ====== BIBLE REFERENCE POPUP SYSTEM ======
-  // ESV verse text database for popup previews
   const verseDB = {
+    'phil-1-17': {
+      title: 'Philippians 1:17 (ESV)',
+      text: '<span class="popup-verse-num">17</span>\u00a0The former proclaim Christ out of selfish ambition, not sincerely but thinking to afflict me in my imprisonment.'
+    },
     'acts-4-36': {
       title: 'Acts 4:36 (ESV)',
-      text: '<span class="popup-verse-num">36</span> Thus Joseph, who was also called by the apostles Barnabas (which means son of encouragement), a Levite, a native of Cyprus…'
+      text: '<span class="popup-verse-num">36</span>\u00a0Thus Joseph, who was also called by the apostles Barnabas (which means son of encouragement), a Levite, a native of Cyprus\u2026'
     },
     '2cor-1-3-4': {
-      title: '2 Corinthians 1:3–4 (ESV)',
-      text: '<span class="popup-verse-num">3</span> Blessed be the God and Father of our Lord Jesus Christ, the Father of mercies and God of all comfort, <span class="popup-verse-num">4</span> who comforts us in all our affliction, so that we may be able to comfort those who are in any affliction, with the comfort with which we ourselves are comforted by God.'
+      title: '2 Corinthians 1:3\u20134 (ESV)',
+      text: '<span class="popup-verse-num">3</span>\u00a0Blessed be the God and Father of our Lord Jesus Christ, the Father of mercies and God of all comfort, <span class="popup-verse-num">4</span>\u00a0who comforts us in all our affliction, so that we may be able to comfort those who are in any affliction, with the comfort with which we ourselves are comforted by God.'
     },
     '1cor-1-9': {
       title: '1 Corinthians 1:9 (ESV)',
-      text: '<span class="popup-verse-num">9</span> God is faithful, by whom you were called into the fellowship of his Son, Jesus Christ our Lord.'
+      text: '<span class="popup-verse-num">9</span>\u00a0God is faithful, by whom you were called into the fellowship of his Son, Jesus Christ our Lord.'
     },
     '2cor-13-14': {
       title: '2 Corinthians 13:14 (ESV)',
-      text: '<span class="popup-verse-num">14</span> The grace of the Lord Jesus Christ and the love of God and the fellowship of the Holy Spirit be with you all.'
+      text: '<span class="popup-verse-num">14</span>\u00a0The grace of the Lord Jesus Christ and the love of God and the fellowship of the Holy Spirit be with you all.'
     },
     'phil-3-15': {
       title: 'Philippians 3:15 (ESV)',
-      text: '<span class="popup-verse-num">15</span> Let those of us who are mature think this way, and if in anything you think otherwise, God will reveal that also to you.'
+      text: '<span class="popup-verse-num">15</span>\u00a0Let those of us who are mature think this way, and if in anything you think otherwise, God will reveal that also to you.'
     },
     'phil-4-2': {
       title: 'Philippians 4:2 (ESV)',
-      text: '<span class="popup-verse-num">2</span> I entreat Euodia and I entreat Syntyche to agree in the Lord.'
-    },
-    'phil-1-5': {
-      title: 'Philippians 1:5 (ESV)',
-      text: '<span class="popup-verse-num">5</span> …because of your partnership in the gospel from the first day until now.'
-    },
-    'phil-1-17': {
-      title: 'Philippians 1:17 (ESV)',
-      text: '<span class="popup-verse-num">17</span> The former proclaim Christ out of selfish ambition, not sincerely but thinking to afflict me in my imprisonment.'
+      text: '<span class="popup-verse-num">2</span>\u00a0I entreat Euodia and I entreat Syntyche to agree in the Lord.'
     },
     'gen-3-5-6': {
-      title: 'Genesis 3:5–6 (ESV)',
-      text: '<span class="popup-verse-num">5</span> For God knows that when you eat of it your eyes will be opened, and you will be like God, knowing good and evil. <span class="popup-verse-num">6</span> So when the woman saw that the tree was good for food, and that it was a delight to the eyes, and that the tree was to be desired to make one wise, she took of its fruit and ate, and she also gave some to her husband who was with her, and he ate.'
+      title: 'Genesis 3:5\u20136 (ESV)',
+      text: '<span class="popup-verse-num">5</span>\u00a0For God knows that when you eat of it your eyes will be opened, and you will be like God, knowing good and evil. <span class="popup-verse-num">6</span>\u00a0So when the woman saw that the tree was good for food, and that it was a delight to the eyes, and that the tree was to be desired to make one wise, she took of its fruit and ate\u2026'
     },
     'isa-53-12': {
       title: 'Isaiah 53:12 (ESV)',
-      text: '<span class="popup-verse-num">12</span> Therefore I will divide him a portion with the many, and he shall divide the spoil with the strong, because he poured out his soul to death and was numbered with the transgressors; yet he bore the sin of many, and makes intercession for the transgressors.'
+      text: '<span class="popup-verse-num">12</span>\u00a0\u2026because he poured out his soul to death and was numbered with the transgressors; yet he bore the sin of many, and makes intercession for the transgressors.'
     },
-    'heb-5-8': {
-      title: 'Hebrews 5:8 (ESV)',
-      text: '<span class="popup-verse-num">8</span> Although he was a son, he learned obedience through what he suffered.'
+    'isa-45-22-23': {
+      title: 'Isaiah 45:22\u201323 (ESV)',
+      text: '<span class="popup-verse-num">22</span>\u00a0Turn to me and be saved, all the ends of the earth! For I am God, and there is no other. <span class="popup-verse-num">23</span>\u00a0By myself I have sworn; from my mouth has gone out in righteousness a word that shall not return: \u201cTo me every knee shall bow, every tongue shall swear allegiance.\u201d'
+    },
+    'john-17-1-5': {
+      title: 'John 17:1, 5 (ESV)',
+      text: '<span class="popup-verse-num">1</span>\u00a0When Jesus had spoken these words, he lifted up his eyes to heaven, and said, \u201cFather, the hour has come; glorify your Son that the Son may glorify you\u2026\u201d <span class="popup-verse-num">5</span>\u00a0And now, Father, glorify me in your own presence with the glory that I had with you before the world existed.'
     },
     'mark-16-12': {
       title: 'Mark 16:12 (ESV)',
-      text: '<span class="popup-verse-num">12</span> After these things he appeared in another form to two of them, as they were walking into the country.'
+      text: '<span class="popup-verse-num">12</span>\u00a0After these things he appeared in another form to two of them, as they were walking into the country.'
+    },
+    'matt-23-12': {
+      title: 'Matthew 23:12 (ESV)',
+      text: '<span class="popup-verse-num">12</span>\u00a0Whoever exalts himself will be humbled, and whoever humbles himself will be exalted.'
+    },
+    'luke-14-11': {
+      title: 'Luke 14:11 (ESV)',
+      text: '<span class="popup-verse-num">11</span>\u00a0For everyone who exalts himself will be humbled, and he who humbles himself will be exalted.'
+    },
+    'heb-5-8': {
+      title: 'Hebrews 5:8 (ESV)',
+      text: '<span class="popup-verse-num">8</span>\u00a0Although he was a son, he learned obedience through what he suffered.'
     },
     'acts-2-33': {
       title: 'Acts 2:33 (ESV)',
-      text: '<span class="popup-verse-num">33</span> Being therefore exalted at the right hand of God, and having received from the Father the promise of the Holy Spirit, he has poured out this that you yourselves are seeing and hearing.'
+      text: '<span class="popup-verse-num">33</span>\u00a0Being therefore exalted at the right hand of God, and having received from the Father the promise of the Holy Spirit, he has poured out this that you yourselves are seeing and hearing.'
     },
-    'isa-45-22-23': {
-      title: 'Isaiah 45:22–23 (ESV)',
-      text: '<span class="popup-verse-num">22</span> Turn to me and be saved, all the ends of the earth! For I am God, and there is no other. <span class="popup-verse-num">23</span> By myself I have sworn; from my mouth has gone out in righteousness a word that shall not return: “To me every knee shall bow, every tongue shall swear allegiance.”'
-    },
-    'rom-10-9': {
-      title: 'Romans 10:9 (ESV)',
-      text: '<span class="popup-verse-num">9</span> …because, if you confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved.'
-    },
-    'john-17-1': {
-      title: 'John 17:1 (ESV)',
-      text: '<span class="popup-verse-num">1</span> When Jesus had spoken these words, he lifted up his eyes to heaven, and said, “Father, the hour has come; glorify your Son that the Son may glorify you…”'
-    },
-    'john-17-5': {
-      title: 'John 17:5 (ESV)',
-      text: '<span class="popup-verse-num">5</span> And now, Father, glorify me in your own presence with the glory that I had with you before the world existed.'
-    },
-    'john-2-19-21': {
-      title: 'John 2:19–21 (ESV)',
-      text: '<span class="popup-verse-num">19</span> Jesus answered them, “Destroy this temple, and in three days I will raise it up.” <span class="popup-verse-num">20</span> The Jews then said, “It has taken forty-six years to build this temple, and will you raise it up in three days?” <span class="popup-verse-num">21</span> But he was speaking about the temple of his body.'
+    'acts-5-31': {
+      title: 'Acts 5:31 (ESV)',
+      text: '<span class="popup-verse-num">31</span>\u00a0God exalted him at his right hand as Leader and Savior, to give repentance to Israel and forgiveness of sins.'
     },
     'deut-12-11': {
       title: 'Deuteronomy 12:11 (ESV)',
-      text: '<span class="popup-verse-num">11</span> …then to the place that the LORD your God will choose, to make his name dwell there…'
-    }
+      text: '<span class="popup-verse-num">11</span>\u00a0\u2026then to the place that the LORD your God will choose, to make his name dwell there\u2026'
+    },
+    '1kings-8-29': {
+      title: '1 Kings 8:29 (ESV)',
+      text: '<span class="popup-verse-num">29</span>\u00a0\u2026that your eyes may be open night and day toward this house, the place of which you have said, \u201cMy name shall be there,\u201d that you may listen to the prayer that your servant offers toward this place.'
+    },
+    'num-6-27': {
+      title: 'Numbers 6:27 (ESV)',
+      text: '<span class="popup-verse-num">27</span>\u00a0So shall they put my name upon the people of Israel, and I will bless them.'
+    },
+    'john-2-19-21': {
+      title: 'John 2:19\u201321 (ESV)',
+      text: '<span class="popup-verse-num">19</span>\u00a0Jesus answered them, \u201cDestroy this temple, and in three days I will raise it up.\u201d <span class="popup-verse-num">20</span>\u00a0The Jews then said, \u201cIt has taken forty-six years to build this temple, and will you raise it up in three days?\u201d <span class="popup-verse-num">21</span>\u00a0But he was speaking about the temple of his body.'
+    },
+    'phil-1-5': {
+      title: 'Philippians 1:5 (ESV)',
+      text: '<span class="popup-verse-num">5</span>\u00a0because of your partnership in the gospel from the first day until now.'
+    },
   };
 
   // Create popup element
@@ -2738,7 +2775,6 @@
     const verse = verseDB[refId];
 
     if (!verse) {
-      // No verse text available — just open BibleHub directly
       window.open(url, '_blank');
       return;
     }
@@ -2747,11 +2783,9 @@
     document.getElementById('popupText').innerHTML = verse.text;
     document.getElementById('popupLink').href = url;
 
-    // Position popup near the clicked element
     const rect = el.getBoundingClientRect();
     const popupEl = document.getElementById('refPopup');
 
-    // Show first to measure
     popupEl.style.visibility = 'hidden';
     popupEl.classList.add('visible');
 
@@ -2759,7 +2793,6 @@
     let top = rect.bottom + 8;
     let left = rect.left;
 
-    // Keep within viewport
     if (top + popupRect.height > window.innerHeight - 20) {
       top = rect.top - popupRect.height - 8;
     }
@@ -2777,7 +2810,6 @@
     document.getElementById('refPopup').classList.remove('visible');
   }
 
-  // Click/tap handler for bible refs — works on both desktop and iOS
   function handleRefTap(e) {
     const ref = e.target.closest('.bible-ref');
     if (ref) {
@@ -2788,7 +2820,6 @@
       return;
     }
 
-    // Close popup if tapping outside
     const popupEl = document.getElementById('refPopup');
     if (popupEl && popupEl.classList.contains('visible') && !popupEl.contains(e.target)) {
       closePopup();
@@ -2796,7 +2827,6 @@
   }
 
   document.addEventListener('click', handleRefTap);
-  // iOS Safari: also listen for touchend on bible-refs since click can be unreliable on spans
   document.addEventListener('touchend', (e) => {
     const ref = e.target.closest('.bible-ref');
     if (ref) {
@@ -2806,12 +2836,11 @@
     }
   }, { passive: false });
 
-  // Close on Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closePopup();
   });
 
-  // Init marking system — handle case where DOM is already loaded
+  // Init marking system
   function initMarking() {
     const container = document.getElementById('scriptureText');
     if (!container) return;
@@ -2827,7 +2856,6 @@
   }
 
 </script>
-
 
 </body>
 </html>
